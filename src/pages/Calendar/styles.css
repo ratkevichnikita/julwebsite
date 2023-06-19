@@ -1,0 +1,241 @@
+.gayd {
+  color: #1C1C1C;
+}
+
+.gayd h1,
+.gayd h2,
+.gayd h4 {
+  color: #CD5352;
+}
+
+.gayd h2 {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.gayd-button {
+  background-color: #CD5352;
+  text-align: center;
+  padding: 17px 0;
+  font-size: 18px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.gayd-img {
+  margin: 15px auto 0;
+}
+
+.gayd-header {
+  position: relative;
+  padding-top: 15px;
+}
+
+.heart-1 {
+  position: absolute;
+  left: 0;
+  top: 15%;
+}
+
+.heart-2 {
+  position: absolute;
+  right: 0;
+  bottom: 15%;
+  transform: rotate(20deg) scale(0.85);
+}
+
+.gayd-avd {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 10px;
+  margin-bottom: 30px;
+}
+
+.gayd-adv-item {
+  text-align: center;
+}
+
+.gayd-section {
+  padding: 60px 0;
+}
+
+.gayd-section.bg {
+  background-color: #FFF7F5;
+}
+
+.gayd-section.about {
+  text-align: center;
+}
+
+.gayd-about-title a {
+  display: inline;
+  color: #CD5352;
+}
+
+.gayd-about-title p {
+  line-height: 1.5em;
+}
+
+.gayd-about-title h2 {
+  margin-bottom: 20px;
+}
+
+.gayd-about-content img{
+  margin: 40px auto 40px;
+}
+
+.gayd-about-content p {
+  line-height: 1.5em;
+}
+
+.gayd-about-content p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.gayd-box {
+  margin: 20px 0 30px;
+}
+
+.gayd-box p {
+  line-height: 1.5em;
+}
+
+.gayd-box p:nth-child(1) {
+  font-weight: 500;
+}
+
+.gayd-box p:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.benefits .heart-1 {
+  top: auto;
+  bottom: 70%;
+}
+
+.benefits-img {
+  position: relative;
+}
+
+.benefits img {
+  margin-bottom: 30px;
+}
+
+.benefits-list {
+  padding-top: 30px;
+}
+
+.benefits-list span  {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.5em;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.benefits-item {
+  margin-bottom: 40px;
+}
+
+.delivery h2 {
+  margin-bottom: 20px;
+}
+
+.delivery p:nth-child(1) {
+  margin-bottom: 40px;
+}
+
+.delivery p:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.delivery a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-decoration-line: underline;
+  color: #CD5352;
+  margin-bottom: 40px;
+}
+
+.delivery a img {
+  margin-left: 5px;
+}
+
+.payment-results-content {
+  padding-top: 15px;
+}
+
+.payment-results-success {
+  margin-bottom: 20px;
+}
+
+.gayd-payment {
+  color: #1c1c1c;
+  padding-top: 15px;
+}
+
+.gayd-payment-description {
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+.gayd-payment-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.gayd-form-input {
+  padding: 15px 20px;
+  border: 1px solid #ABABAB;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gayd-payment-box {
+  margin-bottom: 40px;
+}
+
+.gayd-payment-validation {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #EB3230;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.gayd-payment-button {
+  font-weight: 600;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #CD5352;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

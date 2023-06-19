@@ -1,0 +1,24 @@
+.payment-results-content {
+  margin-bottom: 40px;
+}
+.payment-results-content h2 {
+  margin-bottom: 20px;
+}
+
+.payment-results-button {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+  background-color: #567892;
+  border-radius: 5px;
+}
+
+.payment-results-subbutton {
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #567892;
+  margin-bottom: 20px;
+}

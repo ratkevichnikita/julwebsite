@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "Mak";
+  src: url("./fonts/Mak-Light.eot");
+  src: url("./fonts/Mak-Light.eot?#iefix") format("embedded-opentype"),
+  url("./fonts/Mak-Light.woff2") format("woff2"),
+  url("./fonts/Mak-Light.woff") format("woff"),
+  url("./fonts/Mak-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Regular.eot");
+  src: url("./fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
+  url("./fonts/Gilroy-Regular.woff2") format("woff2"),
+  url("./fonts/Gilroy-Regular.woff") format("woff"),
+  url("./fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-SemiBold.eot");
+  src: url("./fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"),
+  url("./fonts/Gilroy-SemiBold.woff2") format("woff2"),
+  url("./fonts/Gilroy-SemiBold.woff") format("woff"),
+  url("./fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Medium.eot");
+  src: url("./fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"),
+  url("./fonts/Gilroy-Medium.woff2") format("woff2"),
+  url("./fonts/Gilroy-Medium.woff") format("woff"),
+  url("./fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  box-sizing: border-box;
+  font-family: "Mak", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  line-height: 1.3em;
+  color: #CF8C67;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+button {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+div,
+p,
+a,
+ul,
+li,
+span,
+img {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  padding: 0;
+  color: #557892;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding: 40px 0;
+}
+.section.bg {
+  background-color: #F4F4F4;
+}
+
+.primary-btn {
+  padding: 5px 0;
+  max-width: 102px;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  line-height: 1.5em;
+  text-align: center;
+  color: #fff;
+  background-color: #567892;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.primary-btn.small {
+  font-size: 14px;
+  max-width: 90px;
+}
+
+.primary-btn.selected {
+  background-color: #1FAB46;
+}
+
+.secondary-btn {
+  padding: 5px 0;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  max-width: 102px;
+  width: 100%;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: #567892;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid #E3DFD7;
+}
+
+.logo {
+  color: #567892;
+}
+
+.header-inner {
+  align-items: center;
+  padding: 15px 0;
+}
+
+.header-inner-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.back-to-main {
+  display: flex;
+  align-items: center;
+}
+
+.back-to-main svg {
+  margin-right: 5px;
+}
+
+.main-button {
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  width: 100%;
+  max-width: 410px;
+  transform: translateX(50%);
+  height: 40px;
+  background-color: #567892;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+}

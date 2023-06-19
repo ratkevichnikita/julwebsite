@@ -1,0 +1,108 @@
+.sorting {
+  padding-top: 40px;
+}
+
+.sorting-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 60px minmax(80px,40%) minmax(80px,40%);
+}
+
+.sorting-selected {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 10px;
+  padding: 10px 0 0;
+}
+
+.sorting-selected-item {
+  background: #EDEDED;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.5em;
+  white-space: nowrap;
+  border-radius: 17.5px;
+  padding: 2px 10px;
+}
+
+.sorting-selected-item svg {
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.sorting-item {
+  position: relative;
+  color: #567892;
+  line-height: 1.5em;
+  padding: 5px 15px;
+  background-color: #fff;
+  border: 1px solid #567892;
+  border-radius: 5px;
+}
+
+.sorting-item.selected {
+  background-color: #567892;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.sorting-item svg{
+  fill: #567892 ;
+  transition: 0.3s;
+}
+
+.sorting-item.selected svg {
+  fill: #fff;
+  transform: rotate(90deg);
+}
+
+.sorting-label {
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #557892;
+  position: absolute;
+  left: 0;
+  top: -25px;
+  width: max-content;
+}
+
+.sorting-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sorting-title span {
+  display: block;
+  width: 90%;
+  overflow: hidden;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.sorting-title.w-auto span {
+  width: 100%;
+  margin-right: 0;
+}
+
+.sorting-options {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 5px);
+  background-color: #fff;
+  border: 1px solid #E3DFD7;
+  border-radius: 5px;
+  padding: 5px 0;
+  color: #567892;
+  transition: 0.3s;
+}
+
+.sorting-option {
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.sorting-option.selected {
+  background-color: #EDEDED;
+}
