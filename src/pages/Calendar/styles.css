@@ -177,6 +177,21 @@
   padding-top: 15px;
 }
 
+.gayd-payment-back {
+  padding-top: 20px;
+}
+
+.gayd-payment-back-button {
+  background-color: transparent;
+  display: block;
+  margin-bottom: 20px;
+  color: #1c1c1c;
+}
+
+.gayd-payment-back-button svg {
+  margin-right: 10px;
+}
+
 .gayd-payment-description {
   padding-top: 30px;
   margin-bottom: 20px;
