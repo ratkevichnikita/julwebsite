@@ -19,7 +19,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="footer-offer">
-          <Link to={'/'} >Договор оферты</Link>
+          <Link to={'/oferta'} >Договор оферты</Link>
         </div>
         <div className="footer-about">
           <Link to={"mailto:yulia.ratkevich@mail.ru"}>

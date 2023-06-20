@@ -4,18 +4,15 @@ import {Link, useNavigate} from "react-router-dom";
 
 const Results = ({paymentInfo}) => {
 
-  const [paymentMessages,setPaymentMessages] = useState(null);
+  const [paymentMessages,setPaymentMessages] = useState({
+    status: 'Рады приветствовать вас на нашем сайте',
+    text: `Если у вас возникли какие-либо вопросы связанные с оплатой или работой сайта, 
+        пожалуйста свяжитесь с Юлией, написав ей в телеграм @Juleera.`
+  });
   const navigate = useNavigate();
   useEffect(() => {
-
+    const info = {status: '', text: ''}
     if(paymentInfo) {
-      const info = {
-        status: 'Произошла ошибка платежа',
-        text: `Технический сбой. 
-        Если с вашей карты списались деньги и вы видите данное собщение, пожалуйста свяжитесь с Юлией Раткевич, 
-        написав ей в телеграм @Juleera.
-        `
-      }
       if(paymentInfo.status === 'waiting_for_capture') {
         info.status = 'В ожидании подтверждения...'
         info.text = 'Ваша оплата прошла успешно, но мы ждем подтверждения владельца. Если платеж не подтвердят в течении 24 часов, деньги будут автоматечески возвращены на вашу карту'
@@ -37,7 +34,7 @@ const Results = ({paymentInfo}) => {
       setPaymentMessages(info)
     }
   }, [paymentInfo])
-  console.log('paymentMessages',paymentMessages)
+
   return (
     <div className={"payment-results "}>
       <header >

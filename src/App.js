@@ -1,19 +1,20 @@
+import {useCallback, useEffect, useState} from "react";
 import {Route, Routes} from "react-router-dom";
 import {Context} from "./context";
-//components
+//components and methods
 import Main from "./pages/Main/Main";
 import Products from "./pages/Products/Products";
 import ProductsSingle from "./pages/Products/ProductsSingle";
-import {products,sorting} from "./db";
-// styles
-import './App.css';
-import {useCallback, useEffect, useState} from "react";
 import Results from "./pages/Results/Results";
 import {checkPaymentStatus} from "./api/api";
 import Notifications from "./pages/Notifications/Notifications";
 import NotFound from "./pages/NotFound/NotFound";
 import Calendar from "./pages/Calendar/Calendar";
 import CalendarPayment from "./pages/Calendar/CalendarPayment";
+import Oferta from "./pages/Oferta/Oferta";
+import {products,sorting} from "./db";
+// styles
+import './App.css';
 
 function App() {
   const [cartProducts, setCartProducts] = useState([]);
@@ -97,11 +98,12 @@ function App() {
       setProductsList(products)
     }
   }, [JSON.parse(localStorage.getItem("products"))]);
-
+  let count = 0
   const getPaymentStatus = useCallback(() => {
     const paymentId = JSON.parse(localStorage.getItem('paymentId'))
-    if(paymentId && paymentId !== '') {
+    if(paymentId && paymentId !== '' && count === 0) {
       checkPaymentStatus(paymentId,setPaymentInfo)
+      count++
     }
   }, [])
 
@@ -132,6 +134,7 @@ function App() {
           <Route path={'/notifications'} exact element={<Notifications />} />
           <Route path={'/calendar'} exact element={<Calendar />} />
           <Route path={'/calendarPayment'} exact element={<CalendarPayment />} />
+          <Route path={'/oferta'} exact element={<Oferta />} />
           <Route path={'*'} exact element={<NotFound />} />
         </Routes>
       </Context.Provider>
