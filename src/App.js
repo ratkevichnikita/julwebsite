@@ -24,6 +24,7 @@ function App() {
   const [sortByTopics, setSortByTopics] = useState('');
   const [totalSum, setTotalSum] = useState(0);
   const [paymentInfo, setPaymentInfo] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const paymentActions = useCallback((paymentUrl,paymentId) => {
     if(paymentUrl !== '') {
@@ -102,7 +103,7 @@ function App() {
   const getPaymentStatus = useCallback(() => {
     const paymentId = JSON.parse(localStorage.getItem('paymentId'))
     if(paymentId && paymentId !== '' && count === 0) {
-      checkPaymentStatus(paymentId,setPaymentInfo)
+      checkPaymentStatus(paymentId,setPaymentInfo,setLoading)
       count++
     }
   }, [])
@@ -123,7 +124,7 @@ function App() {
   return (
     <div className="App">
       <Context.Provider value={{
-        products, sorting, cartProducts, productsList,
+        products, sorting, cartProducts, productsList, loading,
         sortByTopics, sortByCategories, addToCart, totalSum, paymentActions
       }}>
         <Routes>

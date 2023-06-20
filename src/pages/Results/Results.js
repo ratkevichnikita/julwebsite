@@ -1,15 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import './styles.css';
 import {Link, useNavigate} from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
+import {Context} from "../../context";
 
 const Results = ({paymentInfo}) => {
+
+  const {loading} = useContext(Context);
 
   const [paymentMessages,setPaymentMessages] = useState({
     status: 'Рады приветствовать вас на нашем сайте',
     text: `Если у вас возникли какие-либо вопросы связанные с оплатой или работой сайта, 
         пожалуйста свяжитесь с Юлией, написав ей в телеграм @Juleera.`
   });
+
   const navigate = useNavigate();
+
   useEffect(() => {
     const info = {status: '', text: ''}
     if(paymentInfo) {
@@ -47,20 +53,26 @@ const Results = ({paymentInfo}) => {
         </div>
       </header>
        <div className="wrapper">
-         <div className="payment-results-content text-center">
-           <h2>{paymentMessages?.status}</h2>
-           <p>{paymentMessages?.text}</p>
-         </div>
-         {paymentMessages?.link &&
-           <Link to={paymentMessages?.link} className={"payment-results-subbutton"} >Продолжить оплату</Link>
-         }
-         {paymentMessages?.email &&
-           <div className={"payment-results-success text-center"}>
-             Мы выслали на вашу почту <b>{paymentMessages?.email}</b> письмо с ссылкой для скачивания файла.
-              если по какой-то причине письмо не пришло, пожалуйста свяжитесь с
-              <Link target={"_blank"} to={"https://t.me/juleera"} >Юлией</Link>
+         { loading
+           ?  <div className={"payment-results-loading"}> <Loader /></div>
+           : <div className="payment-results-inner">
+             <div className="payment-results-content text-center">
+               <h2>{paymentMessages?.status}</h2>
+               <p>{paymentMessages?.text}</p>
+             </div>
+             {paymentMessages?.link &&
+               <Link to={paymentMessages?.link} className={"payment-results-subbutton"} >Продолжить оплату</Link>
+             }
+             {paymentMessages?.email &&
+               <div className={"payment-results-success text-center"}>
+                 Мы выслали на вашу почту <b>{paymentMessages?.email}</b> письмо с ссылкой для скачивания файла.
+                 если по какой-то причине письмо не пришло, пожалуйста свяжитесь с
+                 <Link target={"_blank"} to={"https://t.me/juleera"} >Юлией</Link>
+               </div>
+             }
            </div>
          }
+
          <button onClick={() => navigate('/calendar')} className={"payment-results-button"}>Вернуться к товарам</button>
        </div>
     </div>

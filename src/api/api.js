@@ -24,7 +24,8 @@ export const createPayment = async (totalSum,paymentActions,productsNames,emailF
   }
 }
 
-export const checkPaymentStatus = async (paymentId,setPaymentInfo) => {
+export const checkPaymentStatus = async (paymentId,setPaymentInfo, setLoading) => {
+  setLoading(true)
   try {
     const payment = await axios({
       method: 'POST',
@@ -37,8 +38,12 @@ export const checkPaymentStatus = async (paymentId,setPaymentInfo) => {
       }
     })
     setPaymentInfo(payment.data)
+    if(payment.data) {
+      setLoading(false)
+    }
   } catch (error) {
     console.log(error)
+    setLoading(false)
   }
 }
 
