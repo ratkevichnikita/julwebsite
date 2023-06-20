@@ -12,8 +12,8 @@ const CalendarPayment = () => {
 
   const [emailField, setEmailField] = useState('');
   const [validationFiled, setValidationField] = useState({error: false, text: 'Заполните пожалуста поле'});
-  const [timer, setTimer] = useState(null)
-
+  const [timer, setTimer] = useState(null);
+  const emailRegex = new RegExp("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])");
   const onHandleClick = () => {
     if(!validationFiled.error && emailField !== '') {
       createPayment(990, paymentActions,'Гайд: календарь развития ребенка', emailField)
@@ -29,7 +29,7 @@ const CalendarPayment = () => {
   const onHandleChange = (value) => {
     setEmailField(value);
     clearTimeout(timer);
-    if (value.includes('.') && value.includes('@') && value.length > 5) {
+    if (value.match(emailRegex)) {
       setValidationField({error: false, text: ''})
     } else {
       if(value === '') {
