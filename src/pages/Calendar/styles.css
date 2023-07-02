@@ -103,6 +103,10 @@
   line-height: 1.5em;
 }
 
+.gayd-video {
+  margin-bottom: 20px;
+}
+
 .gayd-box p:nth-child(1) {
   font-weight: 500;
 }
@@ -120,8 +124,12 @@
   position: relative;
 }
 
+.reviews-swiper.swiper {
+  padding-bottom: 30px;
+}
+
 .benefits img {
-  margin-bottom: 30px;
+  margin: 0 auto;
 }
 
 .benefits-list {
@@ -138,6 +146,14 @@
 
 .benefits-item {
   margin-bottom: 40px;
+}
+
+.benefits-reviews {
+  padding-top: 60px;
+}
+
+.benefits-reviews h2 {
+  margin-bottom: 10px;
 }
 
 .delivery h2 {
@@ -209,6 +225,7 @@
   border-radius: 5px;
   display: block;
   width: 100%;
+  font-size: 16px;
   box-sizing: border-box;
 }
 

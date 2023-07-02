@@ -1,13 +1,23 @@
 import React from 'react';
 import {Link, useNavigate} from "react-router-dom";
+//components
+import Footer from "../../components/Footer/Footer";
+import YouTube from "react-youtube";
 //styles
 import './styles.css';
+import "swiper/css";
+import "swiper/css/pagination";
 //images
 import cover from "../../images/calendar/cover.webp";
 import heart from "../../images/calendar/heart.svg";
 import insta from "../../images/calendar/insta-foto.webp";
 import whatsapp from "../../images/calendar/whatsapp.svg";
-import Footer from "../../components/Footer/Footer";
+import review1 from '../../images/calendar/review1.webp';
+import review2 from '../../images/calendar/review2.webp';
+import review3 from '../../images/calendar/review3.webp';
+// import Swiper
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
 
 const Calendar = () => {
 
@@ -20,6 +30,7 @@ const Calendar = () => {
 
   return (
     <div className={"gayd"}>
+
       <header >
         <div className="wrapper">
           <div className="gayd-header">
@@ -115,11 +126,45 @@ const Calendar = () => {
             </div>
           </div>
           <div className="benefits-img">
-            <img className={"gayd-img text-center"} src={cover} alt="календарь развития ребенка от Раткевич Юлии"/>
+            <div className="gayd-video">
+              <YouTube
+                videoId="U0PE6MKwb9c"
+                opts={{
+                  height: '390',
+                  width: '300',
+                  playerVars: {
+                    // https://developers.google.com/youtube/player_parameters
+                    autoplay: 0,
+                    modestbranding: 0,
+                    rel: 0
+                  }}}
+              />
+            </div>
             <img className={"heart-1"} src={heart} alt="сердце"/>
             <img className={"heart-2"} src={heart} alt="сердце"/>
           </div>
           <button onClick={() => handleClick()} className={"gayd-button"}>Купить календарь за 990 ₽</button>
+          <div className="benefits-reviews">
+            <h2>Отзывы</h2>
+            <Swiper
+              slidesPerView={1}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="reviews-swiper"
+            >
+              <SwiperSlide>
+                <img src={review1} alt="Отзыв о календаре развитии"/>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={review2} alt="Отзыв о календаре развитии"/>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={review3} alt="Отзыв о календаре развитии"/>
+              </SwiperSlide>
+            </Swiper>
+          </div>
         </div>
       </section>
       <section className={"gayd-section delivery bg text-center"}>
