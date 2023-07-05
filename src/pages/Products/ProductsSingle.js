@@ -1,6 +1,5 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
-import {Context} from "../../context";
 //  components
 import Header from "../../components/Header/Header";
 // styles

@@ -70,6 +70,10 @@
   text-align: center;
 }
 
+.gayd-about-title {
+  text-align: left;
+}
+
 .gayd-about-title a {
   display: inline;
   color: #CD5352;
@@ -93,6 +97,19 @@
 
 .gayd-about-content p:not(:last-child) {
   margin-bottom: 15px;
+}
+
+.gayd-about-img {
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.gayd-about-inner {
+  display: flex;
+  justify-content: space-between;
 }
 
 .gayd-box {

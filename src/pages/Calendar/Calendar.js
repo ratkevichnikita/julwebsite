@@ -15,6 +15,7 @@ import whatsapp from "../../images/calendar/whatsapp.svg";
 import review1 from '../../images/calendar/review1.webp';
 import review2 from '../../images/calendar/review2.webp';
 import review3 from '../../images/calendar/review3.webp';
+import julia from '../../images/calendar/julia.webp';
 // import Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
@@ -61,7 +62,12 @@ const Calendar = () => {
       <section className="gayd-section about">
         <div className="wrapper">
           <div className="gayd-about-title">
-            <h2>Привет, я — Юля!</h2>
+            <div className="gayd-about-inner">
+              <h2>Привет, я — Юля!</h2>
+              <div className="gayd-about-img">
+                <img src={julia} alt="Фотография Юлии Раткевич"/>
+              </div>
+            </div>
             <p>
               Я мама и автор блога <Link to={''}>@momjulee</Link>,
               где делюсь полезными и простыми деями для творчества и развития детей, а также личным опытом о развитии и воспитании ребенка.
@@ -136,7 +142,9 @@ const Calendar = () => {
                     // https://developers.google.com/youtube/player_parameters
                     autoplay: 0,
                     modestbranding: 0,
-                    rel: 0
+                    rel: 0,
+                    loop: 1,
+                    playlist: 'U0PE6MKwb9c'
                   }}}
               />
             </div>
