@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import './styles.css';
+import styles from './styles.module.css';
 import {Context} from "../../context";
 import {createPayment} from "../../api/api";
 import {Link, useNavigate} from "react-router-dom";
@@ -46,17 +46,17 @@ const CalendarPayment = () => {
   return (
     <div>
       <header >
-        <div className="wrapper">
-          <div className="gayd-header">
+        <div className={styles.wrapper}>
+          <div className={styles.paymentHeader}>
             <Link to={'https://www.instagram.com/momjulee/'} target="_blank" className="logo">
               @momjulee
             </Link>
           </div>
         </div>
       </header>
-      <div className="gayd-payment-back">
-        <div className="wrapper">
-          <button className={"gayd-payment-back-button"} onClick={() => navigate(-1)} >
+      <div className={styles.paymentBack}>
+        <div className={styles.wrapper}>
+          <button className={styles.paymentBackButton} onClick={() => navigate(-1)} >
             <svg width="45" height="6" viewBox="0 0 45 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 3L5 5.88675V0.113249L0 3ZM45 2.5L4.5 2.5V3.5L45 3.5V2.5Z" fill="#1C1C1C"/>
             </svg>
@@ -64,27 +64,27 @@ const CalendarPayment = () => {
           </button>
         </div>
       </div>
-      <div className={"gayd-payment text-center"}>
-        <div className="wrapper">
-          <p className={"gayd-payment-title"}>Гайд “Календарь развития ребенка”</p>
+      <div className={`${styles.paymentText} ${styles.center}`}>
+        <div className={styles.wrapper}>
+          <p className={styles.paymentTitle}>Гайд “Календарь развития ребенка”</p>
           <p>
             Итого: <b>990 ₽</b>
           </p>
-          <p className={"gayd-payment-description"}>
+          <p className={styles.paymentDescription}>
             Укажите свою действующую почту, к которой у вас есть доступ.
             После оплаты на указанную вами почту придет ссылка для скачивания Гайда.
           </p>
-          <div className="gayd-payment-box">
+          <div className={styles.paymentBox}>
             <input
-              className={'gayd-form-input'}
+              className={styles.paymentInput}
               onChange={(e) => onHandleChange(e.target.value)}
               value={emailField} type="text"
               placeholder="Введите почту"
             />
-            {(validationFiled.error) && <div className={"gayd-payment-validation"}>{validationFiled.text}</div>}
+            {(validationFiled.error) && <div className={styles.paymentValidation}>{validationFiled.text}</div>}
           </div>
 
-          <button className={"gayd-payment-button"} onClick={() => onHandleClick()} >Оплатить</button>
+          <button className={styles.paymentButton} onClick={() => onHandleClick()} >Оплатить</button>
         </div>
       </div>
     </div>

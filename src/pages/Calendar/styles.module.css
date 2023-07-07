@@ -1,0 +1,438 @@
+.calendar {
+  color: #303030;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.calendar h1,
+.calendar h2,
+.calendar h3,
+.calendar h4 {
+  font-family: 'Gilroy', sans-serif;
+  color: #303030;
+  font-weight: 500;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+
+.paymentHeader {
+  position: relative;
+  padding-top: 15px;
+}
+
+.paymentText {
+  color: #1c1c1c;
+  padding-top: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.paymentTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.paymentDescription {
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+.paymentInput {
+  padding: 15px 20px;
+  border: 1px solid #ABABAB;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.paymentButton {
+  font-weight: 600;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #CD5352;
+  border-radius: 5px;
+}
+
+.paymentValidation {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #EB3230;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.paymentBack {
+  padding-top: 20px;
+}
+
+.paymentBox {
+  margin-bottom: 40px;
+}
+
+.paymentBackButton {
+  background-color: transparent;
+  display: block;
+  margin-bottom: 20px;
+  color: #1c1c1c;
+}
+
+.paymentBackButton svg {
+  margin-right: 10px;
+}
+
+.hero:before {
+  content: '';
+  width: 512px;
+  height: 572px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  z-index: -1;
+  background: url('../../images/calendar/feeds.webp') no-repeat center center / cover;
+}
+
+.calendar h1 {
+  font-size: 52px;
+}
+
+.calendar h2 {
+  font-size: 40px;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.offer {
+  position: relative;
+  padding-top: 150px;
+}
+
+.offer img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(240px, -50px);
+  z-index: -1;
+}
+
+.offerTitle {
+  max-width: 720px;
+}
+
+.offerTitle p {
+  max-width: 400px;
+  font-size: 20px;
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+
+.button {
+  max-width: 300px;
+  background-color: #CD5352;
+  text-align: center;
+  padding: 17px 0;
+  font-size: 18px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.headerAdv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  text-align: center;
+}
+
+.headerLogo {
+  display: none;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.center {
+  text-align: center;
+}
+
+.headerItem p {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+.headerSocial {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+.who {
+  position: relative;
+  overflow: hidden;
+}
+
+.whoInfo {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.whoItem {
+  text-align: center;
+  max-width: 370px;
+}
+
+.whoTitle {
+  text-align: center;
+}
+
+.whoItem img {
+  margin: 0 auto;
+}
+
+.whoItem p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  line-height: 1.3em;
+}
+
+.who button {
+  margin: 0 auto;
+  display: block;
+}
+
+.feeds {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 280px;
+  height: 370px;
+  z-index: -1;
+}
+
+.video {
+  display: flex;
+  justify-content: space-between;
+}
+
+.videoInfo {
+  max-width: 570px;
+}
+
+.videoInfo h2 {
+  margin-bottom: 30px;
+}
+
+.videoInfo p:nth-child(2) {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.videoInfo p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.adv h2 {
+  text-align: center;
+}
+
+.adv button {
+  margin: 0 auto ;
+  display: block;
+}
+
+.advContent {
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.advItem {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 270px;
+}
+
+.advItem p {
+  font-size: 25px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.advItem img {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.bg {
+  background-color: #FFF7F5;
+}
+
+.delivery h2 {
+  margin-bottom: 20px;
+}
+
+.delivery p:nth-child(1) {
+  margin-bottom: 40px;
+}
+
+.delivery p:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.delivery a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-decoration-line: underline;
+  color: #CD5352;
+  margin-bottom: 40px;
+}
+
+.delivery a img {
+  margin-left: 5px;
+}
+
+.reviews h2 {
+  margin-bottom: 20px;
+}
+
+.reviewsContent {
+  padding-top: 50px;
+}
+
+.mobile {
+  display: none;
+}
+
+.reviewsSlider {
+  padding-bottom: 40px!important;
+}
+
+.reviewsSlider img {
+  margin: 0 auto;
+}
+
+/*   media   */
+
+@media screen and (max-width: 992px) {
+  .section {
+    padding: 30px 0;
+  }
+  .header {
+    display: none;
+  }
+  .hero {
+    padding-bottom: 60px;
+  }
+  .hero:before {
+    display: none;
+  }
+  .offer {
+    padding-top: 0;
+  }
+  .offer img {
+    position: static;
+    transform: translate(15px, 0px);
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .headerAdv {
+    display: flex;
+    max-width: 500px;
+    margin: 50px auto 0;
+    gap: 20px;
+  }
+  .aboutImg {
+    display: none;
+  }
+  .offerTitle {
+    text-align: center;
+    margin: -20px auto;
+  }
+  .offerTitle p {
+    margin: 0 auto 20px;
+  }
+
+  .calendar h1 {
+    font-size: 28px;
+  }
+  .calendar h2 {
+    font-size: 26px;
+  }
+
+  .whoInfo {
+    padding-top: 40px;
+  }
+
+  .whoItem,.advItem {
+    margin: 0 auto;
+  }
+
+  .whoItem p {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .advContent {
+    padding-top: 40px;
+  }
+
+  .video {
+    flex-direction: column;
+  }
+
+  .videoInfo {
+    margin-bottom: 30px;
+  }
+
+
+
+
+}

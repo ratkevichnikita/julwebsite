@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 // styles
 import './products.css'
 import MainButton from "../../components/MainButton/MainButton";
+import YouTube from "react-youtube";
 
 const ProductsSingle = ({addToCart,productsList}) => {
   const { id } = useParams();
@@ -73,6 +74,26 @@ const ProductsSingle = ({addToCart,productsList}) => {
                 }
               </div>
             </div>
+            {currentProduct.video &&
+              <div className="c-product-video">
+                <h2>Видеообзор книги</h2>
+                <YouTube
+                  videoId={currentProduct.video}
+                  opts={{
+                    height: '390',
+                    width: '300',
+                    playerVars: {
+                      // https://developers.google.com/youtube/player_parameters
+                      autoplay: 0,
+                      modestbranding: 0,
+                      rel: 0,
+                      loop: 1,
+                      playlist: 'U0PE6MKwb9c'
+                    }}}
+                />
+              </div>
+
+            }
           </div>
         }
       <MainButton />

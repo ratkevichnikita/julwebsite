@@ -59,6 +59,11 @@
   font-family: 'Gilroy', sans-serif;
 }
 
+.c-product h2 {
+  font-size: 24px;
+  font-family: 'Gilroy', sans-serif;
+}
+
 .c-product-img {
   border-radius: 10px;
 }
@@ -129,6 +134,14 @@
   padding-top: 20px;
   font-size: 14px;
   line-height: 1.5em;
+}
+
+.c-product-video {
+  padding-top: 40px;
+}
+
+.c-product-video h2 {
+  margin-bottom: 20px;
 }
 
 

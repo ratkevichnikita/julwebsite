@@ -4,21 +4,31 @@ import {Link, useNavigate} from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import YouTube from "react-youtube";
 //styles
-import './styles.css';
+import styles from './styles.module.css';
 import "swiper/css";
 import "swiper/css/pagination";
+import 'swiper/css/navigation';
 //images
-import cover from "../../images/calendar/cover.webp";
-import heart from "../../images/calendar/heart.svg";
-import insta from "../../images/calendar/insta-foto.webp";
+import main from '../../images/calendar/calendar-main.webp'
 import whatsapp from "../../images/calendar/whatsapp.svg";
 import review1 from '../../images/calendar/review1.webp';
 import review2 from '../../images/calendar/review2.webp';
 import review3 from '../../images/calendar/review3.webp';
-import julia from '../../images/calendar/julia.webp';
+import instagram from "../../images/imstagram.svg";
+import vkontakte from "../../images/vkontakte.svg";
+import who1 from "../../images/calendar/who1.svg"
+import who2 from "../../images/calendar/who2.svg"
+import who3 from "../../images/calendar/who3.svg"
+import feeds from "../../images/calendar/feeds.webp";
+import adv1 from "../../images/calendar/adv1.svg";
+import adv2 from "../../images/calendar/adv2.svg";
+import adv3 from "../../images/calendar/adv3.svg";
+import adv4 from "../../images/calendar/adv4.svg";
+import time from '../../images/calendar/time.webp';
+import time2 from '../../images/calendar/time2.webp';
 // import Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 
 const Calendar = () => {
 
@@ -30,114 +40,142 @@ const Calendar = () => {
   }
 
   return (
-    <div className={"gayd"}>
-
-      <header >
-        <div className="wrapper">
-          <div className="gayd-header">
-            <Link to={'https://www.instagram.com/momjulee/'} target="_blank" className="logo">
+    <div className={styles.calendar}>
+      <header className={styles.hero}>
+        <div className={styles.wrapper}>
+          <div className={styles.header}>
+            <Link to={'https://www.instagram.com/momjulee/'} target="_blank" className={styles.headerLogo}>
               @momjulee
             </Link>
-            <img className={"gayd-img"} src={cover} alt="календарь развития ребенка от Раткевич Юлии"/>
-            <img className={"heart-1"} src={heart} alt="сердце"/>
-            <img className={"heart-2"} src={heart} alt="сердце"/>
+            <div className={styles.headerAdv}>
+                <div className={styles.headerItem}>
+                  <p>60</p>
+                  <span>Страниц</span>
+                </div>
+                <div className={styles.headerItem}>
+                  <p>PDF</p>
+                  <span>Формат</span>
+                </div>
+                <div className={styles.headerItem}>
+                  <p>0-5</p>
+                  <span>От 0 до 5 лет</span>
+                </div>
+            </div>
+            {/*<div className={styles.headerNav}>*/}
+            {/*  <Link to={'#'}>Что это такое</Link>*/}
+            {/*  <Link to={'#'}>Кому подойдет</Link>*/}
+            {/*  <Link to={'#'}>Отзывы</Link>*/}
+            {/*</div>*/}
+            <div className={styles.headerSocial}>
+              <Link to={"https://www.instagram.com/momjulee/"} target={"_blank"}>
+                <img src={instagram} alt="Инстаграмм Юлии раткевич"/>
+              </Link>
+              <Link to={"https://vk.com/club219870830"}  target={"_blank"}>
+                <img src={vkontakte} alt="Инстаграмм Юлии раткевич"/>
+              </Link>
+            </div>
           </div>
-          <div className="gayd-avd">
-            <div className="gayd-adv-item">
-              <h2>60</h2>
-              <p>Страниц</p>
-            </div>
-            <div className="gayd-adv-item">
-              <h2>PDF</h2>
-              <p>Формат</p>
-            </div>
-            <div className="gayd-adv-item">
-              <h2>0-5</h2>
-              <p>От 0 до 5 лет</p>
+          <div className={styles.offer}>
+            <img src={main} alt="Фотография мамы и малыша"/>
+            <div className={styles.offerTitle}>
+              <h1>Раскройте потенциал вашего ребенка с помощью Календаря развития</h1>
+              <p>Вся необходимая информация о развитии малыша с рождения и до пяти лет в одном месте.</p>
+              <button onClick={() => handleClick()} className={styles.button}>Купить календарь</button>
             </div>
           </div>
-          <button onClick={() => handleClick()} className={"gayd-button"}>Купить календарь за 990 ₽</button>
+          <div className={`${styles.headerAdv} ${styles.mobile}`}>
+            <div className={styles.headerItem}>
+              <p>60</p>
+              <span>Страниц</span>
+            </div>
+            <div className={styles.headerItem}>
+              <p>PDF</p>
+              <span>Формат</span>
+            </div>
+            <div className={styles.headerItem}>
+              <p>0-5</p>
+              <span>От 0 до 5 лет</span>
+            </div>
+          </div>
         </div>
       </header>
-      <section className="gayd-section about">
-        <div className="wrapper">
-          <div className="gayd-about-title">
-            <div className="gayd-about-inner">
-              <h2>Привет, я — Юля!</h2>
-              <div className="gayd-about-img">
-                <img src={julia} alt="Фотография Юлии Раткевич"/>
+      <section className={styles.section}>
+        <div className={styles.wrapper}>
+          <div className={styles.center}>
+            <h2>Не хотите упустить время зря?</h2>
+            <img className={styles.aboutImg} src={time} alt=""/>
+            <img className={styles.mobile} src={time2} alt=""/>
+          </div>
+        </div>
+      </section>
+      <section className={`${styles.section} ${styles.who}`}>
+        <div className={styles.wrapper}>
+          <div>
+            <h2 className={styles.whoTitle}>Кому подойдет?</h2>
+            <div className={styles.whoInfo}>
+              <div className={styles.whoItem}>
+                <img src={who1} alt=" Родителям детей от рождения и до 6 лет"/>
+                <p>
+                  Родителям детей <br/>
+                  от рождения и до 6 лет
+                </p>
+                <span>
+                  Именно таков период ВАЖНОГО развития малышей.
+                  За этот период ребенок переживает мощнейшее развитие, такое, как никогда больше в жизни.
+                </span>
+              </div>
+              <div className={styles.whoItem}>
+                <img src={who2} alt="Родителям, которые желают своему малышу здорового детства"/>
+                <p>
+                  Родителям, которые желают своему малышу здорового детства
+                </p>
+                <span>
+                  Это очень важно. Воспитать ребенка здоровым не только физически, но и ментально!
+                  В Календаре посвещанно этой теме особое внимание.
+                </span>
+              </div>
+              <div className={styles.whoItem}>
+                <img src={who3} alt="Родителям, которые ценят свое время и энергию"/>
+                <p>
+                  Родителям, которые ценят <br/>
+                  свое время и энергию
+                </p>
+                <span>
+                  На просторах интернета бездонный океан с информацией о развитии детей.
+                  И только маленький процент пользы. В Календаре собрана как раз эта польза.
+                </span>
               </div>
             </div>
-            <p>
-              Я мама и автор блога <Link to={''}>@momjulee</Link>,
-              где делюсь полезными и простыми деями для творчества и развития детей, а также личным опытом о развитии и воспитании ребенка.
-            </p>
-          </div>
-          <div className="gayd-about-content">
-            <img src={insta} alt="юлия раткевич фото профиля в инстаграмм"/>
-            <p>Каждый раз, когда мне нужна была какая-либо информация о развитии по возрасту моего ребенка,
-              я открывала интернет и начинала искать. Мне приходилось тратить кучу времени на поиски действительно стоящей и полезной инфы.
-            </p>
-            <p>
-              Знакомо?
-            </p>
-            <p>
-              В своем “Календаре” я собрала всю необходимую и важную информацию о развитии,
-              как физическом, так и психоэмоциональном, сделала выжимку и удобно расположила все по возрастам.
-            </p>
+            <img className={styles.feeds} src={feeds} alt="картинка листка"/>
+            <button onClick={() => handleClick()} className={styles.button}>Купить календарь</button>
           </div>
         </div>
       </section>
-      <section className={"gayd-section bg text-center"} >
-        <div className="wrapper">
-          <h2>
-            Календарь развития ребенка
-          </h2>
-          <div className="gayd-box">
-            <p>
-              Зачем следить за развитием вашего малыша и знать об общепринятых нормах развития?
-            </p>
-            <p>
-              Помимо того, что это очень интересно (как было в моем случае), это еще и очень важно!
-              Зная, что именно должно развиваться у малыша в определенный период, можно вовремя отследить отклонения, на раннем этапе и своевременно обратиться за помощью к специалистам.
-            </p>
-            <p>
-              Но не забывайте, что все детки развиваются по-разному, отклонения от норм - это нормально. Но всё же стоит знать о них, чтобы ничего не упустить.
-            </p>
-          </div>
-          <button onClick={() => handleClick()} className={"gayd-button"}>Купить календарь за 990 ₽</button>
-        </div>
-      </section>
-      <section className={"gayd-section benefits text-center"}>
-        <div className="wrapper">
-          <div className="benefits-title">
-            <h2>Вот, что вы получаете</h2>
-          </div>
-          <div className="benefits-list">
-            <div className="benefits-item">
-              <span>60 страниц</span>
-              <p>Чистой выжимки из полезной и понятной информации  о нормах развития детей от 0 до 5 лет.</p>
+      <section className={styles.section}>
+        <div className={styles.wrapper}>
+          <div className={styles.video}>
+            <div className={styles.videoInfo}>
+              <h2>Хотите делать все правильно и вовремя ?</h2>
+              <p>
+                Почему так важно знать, Что именно сейчас переживает в развитии ваш малыш? Зачем нужны нормы развития?
+              </p>
+              <p>
+                Зная, что должно развиваться у вашего ребенка в определенный период, вы сможете интегрировать подходящие игры и активности в его повседневную жизнь. Например, если вашему малышу пора узнать цвета и формы, можно включить их изучение в обычные игры.
+              </p>
+              <p>
+                Зная, что нужно готовить ребенка к запуску речи уже с рождения, вы точно знаете, что и когда нужно внедрить в игры. Это поможет не отставать в развитии и не перегружать ребенка ненужными требованиями. Например, нет необходимости заставлять малыша учиться считать и писать в 3-4 года, когда он должен играть и развивать другие навыки.
+
+              </p>
+              <p>
+                Если хотите быть в курсе развития своего ребенка и развивать его в соответствии с его возрастом, Календарь станет лучшим справочником для вас.
+              </p>
             </div>
-            <div className="benefits-item">
-              <span>Польза в картинках</span>
-              <p>Особенно важные события вынесены в милейшие картинки, для простоты восприятия. </p>
-            </div>
-            <div className="benefits-item">
-              <span>Подарок</span>
-              <p>Чтобы запомнить самые важные моменты, вас будет ждать авторский календарик развитя.</p>
-            </div>
-            <div className="benefits-item">
-              <span>Удобный формат</span>
-              <p>Календарь будет доступен в PDF-формате. Это удобно для заказа из любой точки мира.</p>
-            </div>
-          </div>
-          <div className="benefits-img">
-            <div className="gayd-video">
+            <div className={styles.videoContent}>
               <YouTube
                 videoId="U0PE6MKwb9c"
                 opts={{
-                  height: '390',
-                  width: '300',
+                  width: '320',
+                  height: '485',
                   playerVars: {
                     // https://developers.google.com/youtube/player_parameters
                     autoplay: 0,
@@ -148,34 +186,95 @@ const Calendar = () => {
                   }}}
               />
             </div>
-            <img className={"heart-1"} src={heart} alt="сердце"/>
-            <img className={"heart-2"} src={heart} alt="сердце"/>
-          </div>
-          <button onClick={() => handleClick()} className={"gayd-button"}>Купить календарь за 990 ₽</button>
-          <div className="benefits-reviews">
-            <h2>Отзывы</h2>
-            <Swiper
-              slidesPerView={1}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
-              className="reviews-swiper"
-            >
-              <SwiperSlide>
-                <img src={review1} alt="Отзыв о календаре развитии"/>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={review2} alt="Отзыв о календаре развитии"/>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={review3} alt="Отзыв о календаре развитии"/>
-              </SwiperSlide>
-            </Swiper>
           </div>
         </div>
       </section>
-      <section className={"gayd-section delivery bg text-center"}>
+      <section className={`${styles.section} ${styles.bg}`} >
+        <div className={styles.wrapper}>
+            <div className={styles.adv}>
+              <h2>Вот, что вы получаете</h2>
+              <div className={styles.advContent}>
+                <div className={styles.advItem}>
+                  <img src={adv1} alt="иконка"/>
+                  <p>
+                    60 страниц
+                  </p>
+                  <span>
+                    Чистой выжимки из полезной и понятной информации о нормах развития детей от 0 до 5 лет.
+                  </span>
+                </div>
+                <div className={styles.advItem}>
+                  <img src={adv2} alt="иконка"/>
+                  <p>
+                    В картинках удобнее
+                  </p>
+                  <span>
+                    Особенно важные события вынесены в милейшие картинки, для простоты восприятия.
+                  </span>
+                </div>
+                <div className={styles.advItem}>
+                  <img src={adv3} alt="иконка"/>
+                  <p>
+                    Подарок
+                  </p>
+                  <span>
+                    Чтобы запомнить самые важные моменты, вас будет ждать авторские “Мамины заметки”.
+                  </span>
+                </div>
+                <div className={styles.advItem}>
+                  <img src={adv4} alt="иконка"/>
+                  <p>
+                    Удобный формат
+                  </p>
+                  <span>
+                    Календарь будет доступен в PDF-формате. Это удобно для заказа из любой точки мира.
+                  </span>
+                </div>
+              </div>
+              <button onClick={() => handleClick()} className={styles.button}>Купить календарь</button>
+            </div>
+
+          </div>
+      </section>
+      <section className={styles.section}>
+        <div className={styles.wrapper}>
+          <div className={styles.reviews}>
+            <div className={`${styles.reviewsTitle} ${styles.center}`}>
+              <h2>Отзывы</h2>
+              <p>Уже больше 1000 родителей преобрели Календарь развития. <br/> Благодарю каждого за отзыв.</p>
+            </div>
+            <div className={styles.reviewsContent}>
+                <Swiper
+                  slidesPerView={1}
+                  navigation
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Pagination, Navigation]}
+                  breakpoints={{
+                    768: {
+                      // width: 768,
+                      slidesPerView: 3,
+                      navigation:true
+                    },
+                  }}
+                  className={styles.reviewsSlider}
+                >
+                  <SwiperSlide>
+                    <img src={review1} alt="Отзыв о календаре развитии"/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={review2} alt="Отзыв о календаре развитии"/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={review3} alt="Отзыв о календаре развитии"/>
+                  </SwiperSlide>
+                </Swiper>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className={`${styles.delivery} ${styles.section} ${styles.center} ${styles.bg}`}>
         <div className="wrapper">
           <h2>Оплата и Доставка</h2>
           <div className="delivery-content">
