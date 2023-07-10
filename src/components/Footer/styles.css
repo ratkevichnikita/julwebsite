@@ -3,6 +3,10 @@
   padding: 40px 0;
 }
 
+.footer.bg {
+  background-color: #FFF7F5;
+}
+
 .footer-social {
   display: flex;
   align-items: center;

@@ -6,9 +6,9 @@ import vkontakte from '../../images/vkontakte.svg';
 //styles
 import './styles.css';
 
-const Footer = () => {
+const Footer = ({bg}) => {
   return (
-    <footer className="footer text-center">
+    <footer className={bg ? 'footer text-center bg' : 'footer text-center'}>
       <div className="wrapper">
         <div className="footer-social">
           <Link to={"https://www.instagram.com/momjulee/"} target={"_blank"}>
@@ -30,7 +30,6 @@ const Footer = () => {
             ИНН: <span>391302426628</span>
           </p>
         </div>
-
       </div>
     </footer>
   );

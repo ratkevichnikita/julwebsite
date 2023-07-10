@@ -356,6 +356,51 @@
   margin: 0 auto;
 }
 
+.discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.discountInfo h2 {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+
+.discountInfo p {
+  font-size: 18px;
+  max-width: 370px;
+  margin-bottom: 40px;
+}
+
+.discountColor {
+  color: #CD5352;
+}
+
+.discountCross {
+  display: inline-block;
+  position: relative;
+}
+
+.discountCross:before {
+  content: '';
+  display: block;
+  width: 94%;
+  height: 3px;
+  background-color: #cd5352;
+  position: absolute;
+  left: -10px;
+  top: 22px;
+  transform: rotate(-19deg);
+}
+
+
+
+
+
 /*   media   */
 
 @media screen and (max-width: 992px) {
@@ -415,6 +460,11 @@
     margin: 0 auto;
   }
 
+  .advItem p {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
   .whoItem p {
     margin-bottom: 15px;
     margin-top: 15px;
@@ -432,7 +482,18 @@
     margin-bottom: 30px;
   }
 
+  .discount {
+    text-align: center;
+    justify-content: center;
+  }
 
+  .discountInfo p {
+    margin: 0 auto 30px;
+  }
+
+  .discountCross:before {
+    top: 16px;
+  }
 
 
 }

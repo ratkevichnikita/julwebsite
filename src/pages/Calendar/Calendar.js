@@ -14,6 +14,12 @@ import whatsapp from "../../images/calendar/whatsapp.svg";
 import review1 from '../../images/calendar/review1.webp';
 import review2 from '../../images/calendar/review2.webp';
 import review3 from '../../images/calendar/review3.webp';
+import review4 from '../../images/calendar/review4.webp';
+import review5 from '../../images/calendar/review5.webp';
+import review6 from '../../images/calendar/review6.webp';
+import review7 from '../../images/calendar/review7.webp';
+import review8 from '../../images/calendar/review8.webp';
+import review9 from '../../images/calendar/review9.webp';
 import instagram from "../../images/imstagram.svg";
 import vkontakte from "../../images/vkontakte.svg";
 import who1 from "../../images/calendar/who1.svg"
@@ -26,6 +32,7 @@ import adv3 from "../../images/calendar/adv3.svg";
 import adv4 from "../../images/calendar/adv4.svg";
 import time from '../../images/calendar/time.webp';
 import time2 from '../../images/calendar/time2.webp';
+import discount from '../../images/calendar/discount.webp';
 // import Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
@@ -99,6 +106,24 @@ const Calendar = () => {
           </div>
         </div>
       </header>
+      <section className={`${styles.section} ${styles.bg}`}>
+        <div className={styles.wrapper}>
+          <div className={styles.discount}>
+            <div className={styles.discountInfo}>
+              <h2>
+                Только 2 дня цена на календарь <span className={styles.discountColor}>390 ₽</span> вместо <span className={styles.discountCross}>990 ₽ !</span>
+              </h2>
+              <p>
+                Вся польза о правильном развитии вашего малыша в одном месте!
+              </p>
+              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 390 ₽</button>
+            </div>
+            <div className={styles.discountCounter}>
+              <img src={discount} alt="Фото Календаря развития Юлии Раткевич"/>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className={styles.section}>
         <div className={styles.wrapper}>
           <div className={styles.center}>
@@ -155,7 +180,7 @@ const Calendar = () => {
         <div className={styles.wrapper}>
           <div className={styles.video}>
             <div className={styles.videoInfo}>
-              <h2>Хотите делать все правильно и вовремя ?</h2>
+              <h2>“Календарь развития ребенка”</h2>
               <p>
                 Почему так важно знать, Что именно сейчас переживает в развитии ваш малыш? Зачем нужны нормы развития?
               </p>
@@ -269,12 +294,48 @@ const Calendar = () => {
                   <SwiperSlide>
                     <img src={review3} alt="Отзыв о календаре развитии"/>
                   </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={review4} alt="Отзыв о календаре развитии"/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={review5} alt="Отзыв о календаре развитии"/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={review6} alt="Отзыв о календаре развитии"/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={review7} alt="Отзыв о календаре развитии"/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={review8} alt="Отзыв о календаре развитии"/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={review9} alt="Отзыв о календаре развитии"/>
+                  </SwiperSlide>
                 </Swiper>
             </div>
           </div>
         </div>
       </section>
-      <section className={`${styles.delivery} ${styles.section} ${styles.center} ${styles.bg}`}>
+      <section className={`${styles.section} ${styles.bg}`}>
+        <div className={styles.wrapper}>
+          <div className={styles.discount}>
+            <div className={styles.discountInfo}>
+              <h2>
+                Только 2 дня цена на календарь <span className={styles.discountColor}>390 ₽</span> вместо <span className={styles.discountCross}>990 ₽ !</span>
+              </h2>
+              <p>
+                Вся польза о правильном развитии вашего малыша в одном месте!
+              </p>
+              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 390 ₽</button>
+            </div>
+            <div className={styles.discountCounter}>
+              <img src={discount} alt="Фото Календаря развития Юлии Раткевич"/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className={`${styles.delivery} ${styles.section} ${styles.center} `}>
         <div className="wrapper">
           <h2>Оплата и Доставка</h2>
           <div className="delivery-content">
@@ -301,7 +362,7 @@ const Calendar = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer bg={true} />
     </div>
   );
 };
