@@ -397,6 +397,10 @@
   transform: rotate(-19deg);
 }
 
+.videoContent {
+  width: 320px;
+  height: 485px;
+}
 
 
 

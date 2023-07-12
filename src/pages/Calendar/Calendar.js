@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 //components
-import Footer from "../../components/Footer/Footer";
-import YouTube from "react-youtube";
+import Footer from "../../components/Footer/Footer"
 //styles
 import styles from './styles.module.css';
 import "swiper/css";
@@ -37,15 +36,16 @@ import discount from '../../images/calendar/discount.webp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
 
+import YouTube from "react-youtube";
+import {useOnScreen} from "../../hooks/useOnScreen";
 const Calendar = () => {
-
-  const navigare = useNavigate();
-
+  const navigate = useNavigate();
+  const elementRef = useRef(null);
+  const isOnScreen = useOnScreen(elementRef);
   const handleClick = () => {
-    navigare('/calendarPayment');
+    navigate('/calendarPayment');
     {window.ym(93983666, 'reachGoal', 'ya-event-js')}
   }
-
   return (
     <div className={styles.calendar}>
       <header className={styles.hero}>
@@ -195,21 +195,22 @@ const Calendar = () => {
                 Если хотите быть в курсе развития своего ребенка и развивать его в соответствии с его возрастом, Календарь станет лучшим справочником для вас.
               </p>
             </div>
-            <div className={styles.videoContent}>
-              <YouTube
-                videoId="U0PE6MKwb9c"
-                opts={{
-                  width: '320',
-                  height: '485',
-                  playerVars: {
-                    // https://developers.google.com/youtube/player_parameters
-                    autoplay: 0,
-                    modestbranding: 0,
-                    rel: 0,
-                    loop: 1,
-                    playlist: 'U0PE6MKwb9c'
-                  }}}
-              />
+            <div ref={elementRef} className={styles.videoContent}>
+              { isOnScreen && <YouTube
+                  videoId="U0PE6MKwb9c"
+                  opts={{
+                    width: '320',
+                    height: '485',
+                    playerVars: {
+                      // https://developers.google.com/youtube/player_parameters
+                      autoplay: 0,
+                      modestbranding: 0,
+                      rel: 0,
+                      loop: 1,
+                      playlist: 'U0PE6MKwb9c'
+                    }}}
+                />
+              }
             </div>
           </div>
         </div>
@@ -280,7 +281,7 @@ const Calendar = () => {
                     768: {
                       // width: 768,
                       slidesPerView: 3,
-                      navigation:true
+                      navigation:true,
                     },
                   }}
                   className={styles.reviewsSlider}

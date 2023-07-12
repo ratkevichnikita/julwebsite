@@ -1,20 +1,20 @@
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useEffect, useState, lazy, Suspense} from "react";
 import {Route, Routes} from "react-router-dom";
 import {Context} from "./context";
-//components and methods
-import Main from "./pages/Main/Main";
-import Products from "./pages/Products/Products";
-import ProductsSingle from "./pages/Products/ProductsSingle";
-import Results from "./pages/Results/Results";
-import {checkPaymentStatus} from "./api/api";
-import Notifications from "./pages/Notifications/Notifications";
-import NotFound from "./pages/NotFound/NotFound";
-import Calendar from "./pages/Calendar/Calendar";
-import CalendarPayment from "./pages/Calendar/CalendarPayment";
-import Oferta from "./pages/Oferta/Oferta";
-import {products,sorting} from "./db";
 // styles
 import './App.css';
+//components and methods
+import {checkPaymentStatus} from "./api/api";
+import {products,sorting} from "./db";
+const MainLazy = lazy(() => import('./pages/Main/Main'));
+const ProductsLazy = lazy(() => import('./pages/Products/Products'));
+const ProductsSingleLazy = lazy(() => import('./pages/Products/ProductsSingle'));
+const ResultsLazy = lazy(() => import('./pages/Results/Results'))
+const NotificationsLazy  = lazy(() => import('./pages/Notifications/Notifications'))
+const NotFoundLazy = lazy(() => import('./pages/NotFound/NotFound'))
+const CalendarLazy = lazy(() => import('./pages/Calendar/Calendar'))
+const CalendarPaymentLazy = lazy(() => import('./pages/Calendar/CalendarPayment'))
+const OfertaLazy = lazy(() => import('./pages/Oferta/Oferta'))
 
 function App() {
   const [cartProducts, setCartProducts] = useState([]);
@@ -128,15 +128,15 @@ function App() {
         sortByTopics, sortByCategories, addToCart, totalSum, paymentActions
       }}>
         <Routes>
-          <Route path={'/'} exact element={ <Main />} />
-          <Route path={'/products/:id'} exact element={<ProductsSingle productsList={productsList} addToCart={addToCart} />} />
-          <Route path={'/products'} exact element={<Products setSortByTopics={setSortByTopics} setSortByCategories={setSortByCategories} productsList={productsList} addToCart={addToCart} />}/>
-          <Route path={'/results'} exact element={ <Results paymentInfo={paymentInfo} />} />
-          <Route path={'/notifications'} exact element={<Notifications />} />
-          <Route path={'/calendar'} exact element={<Calendar />} />
-          <Route path={'/calendarPayment'} exact element={<CalendarPayment />} />
-          <Route path={'/oferta'} exact element={<Oferta />} />
-          <Route path={'*'} exact element={<NotFound />} />
+          <Route path={'/'} exact element={ <Suspense fallback={"Загрузка..."} > <MainLazy /> </Suspense>} />
+          <Route path={'/products/:id'} exact element={<Suspense fallback={"Загрузка..."}> <ProductsSingleLazy productsList={productsList} addToCart={addToCart} /></Suspense>} />
+          <Route path={'/products'} exact element={<Suspense fallback={"Загрузка..."} > <ProductsLazy setSortByTopics={setSortByTopics} setSortByCategories={setSortByCategories} productsList={productsList} addToCart={addToCart} /></Suspense>}/>
+          <Route path={'/results'} exact element={<Suspense fallback={"Загрузка..."} > <ResultsLazy paymentInfo={paymentInfo} /></Suspense>} />
+          <Route path={'/notifications'} exact element={<Suspense fallback={"Загрузка..."} > <NotificationsLazy /></Suspense>} />
+          <Route path={'/calendar'} exact element={<Suspense fallback={"Загрузка..."} > <CalendarLazy /></Suspense>} />
+          <Route path={'/calendarPayment'} exact element={<Suspense fallback={"Загрузка..."} > <CalendarPaymentLazy /></Suspense>} />
+          <Route path={'/oferta'} exact element={<Suspense fallback={"Загрузка..."} > <OfertaLazy /> </Suspense>} />
+          <Route path={'*'} exact element={<Suspense fallback={"Загрузка..."} > <NotFoundLazy /> </Suspense>} />
         </Routes>
       </Context.Provider>
     </div>
