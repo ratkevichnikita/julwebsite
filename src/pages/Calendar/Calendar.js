@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 //components
 import Footer from "../../components/Footer/Footer"
@@ -38,13 +38,22 @@ import { Pagination, Navigation } from 'swiper';
 
 import YouTube from "react-youtube";
 import {useOnScreen} from "../../hooks/useOnScreen";
+
 const Calendar = () => {
   const navigate = useNavigate();
   const elementRef = useRef(null);
-  const isOnScreen = useOnScreen(elementRef);
+  const [videoOnScreen, setVideoOnScreen] = useState(false);
+  const isOnScreen = useOnScreen(elementRef,setVideoOnScreen);
+
+  useEffect(() => {
+    if(isOnScreen) {
+      setVideoOnScreen(true)
+    }
+  }, [isOnScreen])
+
   const handleClick = () => {
     navigate('/calendarPayment');
-    {window.ym(93983666, 'reachGoal', 'ya-event-js')}
+    {window.yaCounter93983666.reachGoal('ya-event-js')}
   }
   return (
     <div className={styles.calendar}>
@@ -111,12 +120,12 @@ const Calendar = () => {
           <div className={styles.discount}>
             <div className={styles.discountInfo}>
               <h2>
-                Только 2 дня цена на календарь <span className={styles.discountColor}>390 ₽</span> вместо <span className={styles.discountCross}>990 ₽ !</span>
+                Специальное предложение <span className={styles.discountColor}>790 ₽</span> вместо <span className={styles.discountCross}>1300 ₽ !</span>
               </h2>
               <p>
                 Вся польза о правильном развитии вашего малыша в одном месте!
               </p>
-              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 390 ₽</button>
+              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>
             </div>
             <div className={styles.discountCounter}>
               <img src={discount} alt="Фото Календаря развития Юлии Раткевич"/>
@@ -196,10 +205,10 @@ const Calendar = () => {
               </p>
             </div>
             <div ref={elementRef} className={styles.videoContent}>
-              { isOnScreen && <YouTube
+              { videoOnScreen && <YouTube
                   videoId="U0PE6MKwb9c"
                   opts={{
-                    width: '320',
+                    width: '310',
                     height: '485',
                     playerVars: {
                       // https://developers.google.com/youtube/player_parameters
@@ -272,7 +281,6 @@ const Calendar = () => {
             <div className={styles.reviewsContent}>
                 <Swiper
                   slidesPerView={1}
-                  navigation
                   pagination={{
                     clickable: true,
                   }}
@@ -284,6 +292,7 @@ const Calendar = () => {
                       navigation:true,
                     },
                   }}
+                  navigation={true}
                   className={styles.reviewsSlider}
                 >
                   <SwiperSlide>
@@ -323,12 +332,12 @@ const Calendar = () => {
           <div className={styles.discount}>
             <div className={styles.discountInfo}>
               <h2>
-                Только 2 дня цена на календарь <span className={styles.discountColor}>390 ₽</span> вместо <span className={styles.discountCross}>990 ₽ !</span>
+                Специальное предложение <span className={styles.discountColor}>790 ₽</span> вместо <span className={styles.discountCross}>1300 ₽ !</span>
               </h2>
               <p>
                 Вся польза о правильном развитии вашего малыша в одном месте!
               </p>
-              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 390 ₽</button>
+              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>
             </div>
             <div className={styles.discountCounter}>
               <img src={discount} alt="Фото Календаря развития Юлии Раткевич"/>

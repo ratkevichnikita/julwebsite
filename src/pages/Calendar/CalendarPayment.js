@@ -17,8 +17,8 @@ const CalendarPayment = () => {
   const onHandleClick = () => {
     if(!validationFiled.error && emailField !== '') {
       const email = emailField.trim();
-      {window.ym(93983666,'reachGoal','ya-payment.js')}
-      createPayment(390, paymentActions,'Гайд: календарь развития ребенка', email)
+      createPayment(790, paymentActions,'Гайд: календарь развития ребенка', email)
+      {window.yaCounter93983666.reachGoal('ya-payment.js')}
     } else {
       if(emailField === '') {
         setValidationField({error: true, text:'Заполните пожалуста поле'})
@@ -70,7 +70,7 @@ const CalendarPayment = () => {
         <div className={styles.wrapper}>
           <p className={styles.paymentTitle}>Гайд “Календарь развития ребенка”</p>
           <p>
-            Итого: <b>390 ₽</b>
+            Итого: <b>790 ₽</b>
           </p>
           <p className={styles.paymentDescription}>
             Укажите свою действующую почту, к которой у вас есть доступ.

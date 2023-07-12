@@ -376,6 +376,10 @@
   margin-bottom: 40px;
 }
 
+.discountInfo > span {
+  white-space: nowrap;
+}
+
 .discountColor {
   color: #CD5352;
 }
@@ -398,7 +402,7 @@
 }
 
 .videoContent {
-  width: 320px;
+  width: 310px;
   height: 485px;
 }
 
