@@ -106,6 +106,7 @@
 .prod__card {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 15px;
   border: 1px solid #E3DFD7;
   border-radius: 5px;
@@ -117,9 +118,15 @@
 .prod__card-title {
   font-weight: 500;
 }
-.prod__card__description {
+.prod__card-box {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.prod__card-description {
   font-size: 12px;
   margin-top: 10px;
+  max-width: 500px;
 }
 .prod__card-img {
   flex-shrink: 0;

@@ -2,24 +2,25 @@ import React from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import './main.css';
 //images
-import star from '../../images/star.svg';
-import star1 from '../../images/star1.svg';
-import star2 from '../../images/star2.svg';
-import star3 from '../../images/star3.svg';
-import star4 from '../../images/star4.svg';
-import star5 from '../../images/star5.svg';
-import star6 from '../../images/star6.svg';
+import star from '../../images/main/star.svg';
+import star1 from '../../images/main/star1.svg';
+import star2 from '../../images/main/star2.svg';
+import star3 from '../../images/main/star3.svg';
+import star4 from '../../images/main/star4.svg';
+import star5 from '../../images/main/star5.svg';
+import star6 from '../../images/main/star6.svg';
 import arrow from '../../images/arrow.svg';
-import toy from '../../images/toy.svg';
-import q1 from '../../images/q1.webp';
-import q2 from '../../images/q2.webp';
-import smallArrow from '../../images/small-arrow.svg';
-import main from '../../images/main.webp';
-import emodzi from '../../images/emodzi.webp';
-import inwork from '../../images/inwork.svg';
-import close from '../../images/close.svg';
+import toy from '../../images/main/toy.svg';
+import q1 from '../../images/main/q1.webp';
+import q2 from '../../images/main/q2.webp';
+import smallArrow from '../../images/main/small-arrow.svg';
+import avatar from '../../images/main/avatar.webp';
+import emodzi from '../../images/main/emodzi.webp';
+import inwork from '../../images/main/inwork.svg';
+import close from '../../images/main/close.svg';
 import telegram from '../../images/telegram.svg';
-import vk from '../../images/vk.svg';
+import vk from '../../images/main/vk.svg';
+import calendar from '../../images/main/calendarcover.webp';
 
 const Main = () => {
   const navigate = useNavigate();
@@ -54,7 +55,7 @@ const Main = () => {
                   </div>
                 </div>
               <div className="offer__img">
-                <img src={main} alt="Юлия Раткевич" />
+                <img src={avatar} alt="Юлия Раткевич" />
               </div>
           </div>
         </div>
@@ -74,7 +75,7 @@ const Main = () => {
                         <div className="propd__card-title">
                           Развивашки для детей. Пособия.
                         </div>
-                        <p className="prod__card__description">
+                        <p className="prod__card-description">
                           Тут собраны все пособия для занятий с вашими детками, которые можно приобрести в электронном
                           виде.
                         </p>
@@ -86,6 +87,24 @@ const Main = () => {
                         <img src={smallArrow} alt="стрелочка" />
                       </div>
                     </div>
+                    <div onClick={() => navigate('/calendar')} className="prod__card">
+                      <div className="prod__card-inner">
+                        <div className="propd__card-title">
+                          Гайд “Календарь развития ребёнка”
+                        </div>
+                        <p className="prod__card-description">
+                          Вся необходимая информация о развитии малыша с рождения и до пяти лет в одном месте.
+                        </p>
+                      </div>
+                      <div className="prod__card-box">
+                        <div className="prod__card-img">
+                          <img src={calendar} alt="Иконка игрушки" />
+                        </div>
+                        <div className="prod__card-arrow">
+                          <img src={smallArrow} alt="стрелочка" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div className="prod__item">
                     <div className="prod__caption">
@@ -94,18 +113,20 @@ const Main = () => {
                     <div className="prod__card">
                       <div className="prod__card-inner">
                         <div className="propd__card-title">
-                          Встреча со мной лично или онлайн.
+                          Встреча/Консультация
+                          со мной лично или онлайн.
                         </div>
-                        <p className="prod__card__description">
-                          Формат беседы, ответы на любые вопросы,
-                          заряд энергией и позитивом.
+                        <p className="prod__card-description">
+                          Формат беседы, ответы на любые вопросы, консультации по ведению и развитию блога.
                         </p>
                       </div>
-                      <div className="prod__card-img">
-                        <img src={emodzi} alt="Иконка игрушки" />
-                      </div>
-                      <div className="prod__card-arrow">
-                        <img src={smallArrow} alt="стрелочка" />
+                      <div className="prod__card-box">
+                        <div className="prod__card-img">
+                          <img src={emodzi} alt="Иконка игрушки" />
+                        </div>
+                        <div className="prod__card-arrow">
+                          <img src={smallArrow} alt="стрелочка" />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -116,35 +137,37 @@ const Main = () => {
                           Авторский мини-марафон
                           “Первые шаги к жизни мечты”.
                         </div>
-                        <p className="prod__card__description">
-                          Формат беседы, ответы на любые вопросы,
-                          заряд энергией и позитивом.
+                        <p className="prod__card-description">
+                          Для тех, кто затр*хался жить в “дне сурка”, и хочет перемен.
                         </p>
                       </div>
-                      <div className="prod__card-img">
-                        <img src={inwork} alt="Иконка игрушки" />
-                      </div>
-                      <div className="prod__card-arrow">
-                        <img src={close} alt="стрелочка" />
+                      <div className="prod__card-box">
+                        <div className="prod__card-img">
+                          <img src={inwork} alt="Иконка игрушки" />
+                        </div>
+                        <div className="prod__card-arrow">
+                          <img src={close} alt="стрелочка" />
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div className="prod__item closed">
                     <div className="prod__card">
                       <div className="prod__card-inner">
-                        <div className="propd__card-title">
+                        <div className="prod__card-title">
                           Вдохновение и мотивация.
                         </div>
-                        <p className="prod__card__description">
-                          Мои мысли, мой опыт и мои инструменты, которые помогают идти к целям, не сливаться и жить
-                          кайфово.
+                        <p className="prod__card-description">
+                          Мои мысли, мой опыт и мои инструменты, которые помогают идти к целям, не сливаться и жить кайфово.
                         </p>
                       </div>
-                      <div className="prod__card-img">
-                        <img src={inwork} alt="Иконка игрушки" />
-                      </div>
-                      <div className="prod__card-arrow">
-                        <img src={close} alt="стрелочка" />
+                      <div className="prod__card-box">
+                        <div className="prod__card-img">
+                          <img src={inwork} alt="Иконка игрушки" />
+                        </div>
+                        <div className="prod__card-arrow">
+                          <img src={close} alt="стрелочка" />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -162,7 +185,7 @@ const Main = () => {
                     Задать <br />
                     мне вопрос
                   </h2>
-                  <a href="#" rel="nofollow" target="_blank" className="button">
+                  <a href="https://t.me/Juleera" rel="nofollow noreferrer" target="_blank" className="button">
                     <img src={telegram} alt="телеграм" />
                       Telegram
                   </a>
@@ -183,7 +206,7 @@ const Main = () => {
                   “ДЕТСКОЕ РАЗВИТИЕ И ТВОРЧЕСТВО”
                   <img src={arrow} alt="стрелка" />
                 </p>
-                <a href="#" rel="nofollow" target="_blank" className="button">
+                <a href="https://t.me/detskoe_razvitie_tvorchestvo" rel="nofollow noreferrer" target="_blank" className="button">
                   <img src={telegram} alt="телеграм" />
                     Telegram
                 </a>
@@ -195,7 +218,7 @@ const Main = () => {
                   “Юля / Детские поделки / Творчество / Развивашки”
                   <img src={arrow} alt="стрелка" />
                 </p>
-                <a href="#" rel="nofollow" target="_blank" className="button">
+                <a href="https://vk.com/momjulee" rel="nofollow noreferrer" target="_blank" className="button">
                   <img src={vk} alt="вконтакте" />
                     Вконтакте
                 </a>

@@ -6,14 +6,14 @@ import Header from "../../components/Header/Header";
 import './products.css'
 import MainButton from "../../components/MainButton/MainButton";
 import YouTube from "react-youtube";
+import Slider from "../../components/Slider/Slider";
 
 const ProductsSingle = ({addToCart,productsList}) => {
   const { id } = useParams();
   const [currentProduct, setCurrentProduct] = useState(null);
   const [tabsName,setTabsName] = useState([
     {value: 'Описание', isSelected: true, name:''},
-    {value: 'Оплата', isSelected: false},
-    {value: 'Доступ', isSelected: false},
+    {value: 'Оплата и доступ', isSelected: false},
   ]);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const ProductsSingle = ({addToCart,productsList}) => {
       <div className="wrapper">
         {currentProduct &&
           <div className="c-product-content">
-            <img className={"c-product-img"} src={currentProduct.img} alt={currentProduct.title} />
+            <Slider singleImage={currentProduct.img} arrayImages={currentProduct.additionalImages} />
             <div className="c-product-meta">
               <div className="c-product-inner">
                 <p className={"c-product-price"}>Цена: <span>{currentProduct.price} ₽ </span></p>
@@ -61,15 +61,14 @@ const ProductsSingle = ({addToCart,productsList}) => {
               </div>
               <div className="c-product-tabs-content">
                 {tabsName.map(item => {
+                    let description = null;
                     if(item.isSelected && item.value === 'Описание') {
-                      return currentProduct.description
+                      description = currentProduct.description.split('/').map((item,index) => (<p key={index}>{item}</p>))
                     }
-                    if(item.isSelected && item.value === 'Оплата') {
-                      return currentProduct.payment
+                    if(item.isSelected && item.value === 'Оплата и доступ') {
+                      description = currentProduct.payment.split('/').map((item,index) => (<p key={index}>{item}</p>))
                     }
-                    if(item.isSelected && item.value === 'Доступ') {
-                      return currentProduct.access
-                    }
+                    return description
                   })
                 }
               </div>
@@ -88,11 +87,10 @@ const ProductsSingle = ({addToCart,productsList}) => {
                       modestbranding: 0,
                       rel: 0,
                       loop: 1,
-                      playlist: 'U0PE6MKwb9c'
+                      playlist: currentProduct.video
                     }}}
                 />
               </div>
-
             }
           </div>
         }

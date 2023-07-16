@@ -5,7 +5,7 @@
 .sorting-container {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 60px minmax(80px,40%) minmax(80px,40%);
+  grid-template-columns: minmax(80px,300px) minmax(80px,300px);
 }
 
 .sorting-selected {

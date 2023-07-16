@@ -20,10 +20,6 @@ const Sorting = ({setSortByCategories,setSortByTopics}) => {
   }, []);
 
   const sortingHandle = (id) => {
-    if(id === 's1') {
-      setProductsSort(sorting)
-      setSelectedSorting([])
-    }
     setOpenSorting(id)
   };
 
@@ -134,15 +130,14 @@ const Sorting = ({setSortByCategories,setSortByTopics}) => {
               <div className="sorting-label">{sort.label}</div>
               <p className={i ===0 ? 'sorting-title w-auto' : 'sorting-title'}>
                 <span>{sortTitle}</span>
-                {
-                  sort.options.length > 0 && (
+                {sort.options.length > 0 && (
                     <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M11.3794 7.08838L4.44141 0.169625C4.21409 -0.0569268 3.84607 -0.0565459 3.61913 0.170797C3.39238 0.39811 3.39296 0.766341 3.62031 0.993069L10.1453 7.50003L3.62007 14.007C3.39276 14.2337 3.39217 14.6017 3.6189 14.829C3.73266 14.943 3.88169 15 4.03072 15C4.17938 15 4.32782 14.9434 4.44138 14.8302L11.3794 7.91164C11.4888 7.80272 11.5503 7.65448 11.5503 7.50003C11.5503 7.34557 11.4887 7.19751 11.3794 7.08838Z" />
                     </svg>
                   )
                 }
               </p>
-              { (sort.options.length > 0 && sort.id === openSorting) && (
+                {(sort.options.length > 0 && sort.id === openSorting) && (
                 <div className="sorting-options">
                   { sort.options.map(option =>
                     <div

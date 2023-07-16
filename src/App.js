@@ -10,7 +10,7 @@ const MainLazy = lazy(() => import('./pages/Main/Main'));
 const ProductsLazy = lazy(() => import('./pages/Products/Products'));
 const ProductsSingleLazy = lazy(() => import('./pages/Products/ProductsSingle'));
 const ResultsLazy = lazy(() => import('./pages/Results/Results'))
-const NotificationsLazy  = lazy(() => import('./pages/Notifications/Notifications'))
+const CheckoutLazy  = lazy(() => import('./pages/Checkout/Checkout'))
 const NotFoundLazy = lazy(() => import('./pages/NotFound/NotFound'))
 const CalendarLazy = lazy(() => import('./pages/Calendar/Calendar'))
 const CalendarPaymentLazy = lazy(() => import('./pages/Calendar/CalendarPayment'))
@@ -132,7 +132,7 @@ function App() {
           <Route path={'/products/:id'} exact element={<Suspense fallback={"Загрузка..."}> <ProductsSingleLazy productsList={productsList} addToCart={addToCart} /></Suspense>} />
           <Route path={'/products'} exact element={<Suspense fallback={"Загрузка..."} > <ProductsLazy setSortByTopics={setSortByTopics} setSortByCategories={setSortByCategories} productsList={productsList} addToCart={addToCart} /></Suspense>}/>
           <Route path={'/results'} exact element={<Suspense fallback={"Загрузка..."} > <ResultsLazy paymentInfo={paymentInfo} /></Suspense>} />
-          <Route path={'/notifications'} exact element={<Suspense fallback={"Загрузка..."} > <NotificationsLazy /></Suspense>} />
+          <Route path={'/checkout'} exact element={<Suspense fallback={"Загрузка..."} > <CheckoutLazy /></Suspense>} />
           <Route path={'/calendar'} exact element={<Suspense fallback={"Загрузка..."} > <CalendarLazy /></Suspense>} />
           <Route path={'/calendarPayment'} exact element={<Suspense fallback={"Загрузка..."} > <CalendarPaymentLazy /></Suspense>} />
           <Route path={'/oferta'} exact element={<Suspense fallback={"Загрузка..."} > <OfertaLazy /> </Suspense>} />
