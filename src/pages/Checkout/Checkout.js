@@ -1,23 +1,26 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import styles from './styles.module.css';
 import {Context} from "../../context";
 import {createPayment} from "../../api/api";
 import {Link, useNavigate} from "react-router-dom";
+import {emailRegex} from "../../utils/helpers";
 
 const Checkout = () => {
 
-  const { paymentActions } = useContext(Context);
-  console.log('paymentActions',paymentActions)
+  const { paymentActions, totalSum } = useContext(Context);
+  const [selectedProducts, setSelectedProducts] = useState([])
+  const products = JSON.parse(localStorage.getItem('products'));
+
   const navigate = useNavigate();
 
   const [emailField, setEmailField] = useState('');
   const [validationFiled, setValidationField] = useState({error: false, text: 'Заполните пожалуста поле'});
   const [timer, setTimer] = useState(null);
-  const emailRegex = new RegExp("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])");
+
   const onHandleClick = () => {
     if(!validationFiled.error && emailField !== '') {
       const email = emailField.trim();
-      createPayment(790, paymentActions,'Гайд: календарь развития ребенка', email)
+      createPayment(totalSum, paymentActions,'Гайд: календарь развития ребенка', email)
       {window.yaCounter93983666.reachGoal('ya-payment.js')}
     } else {
       if(emailField === '') {
@@ -45,6 +48,13 @@ const Checkout = () => {
     }
   }
 
+  useEffect(() => {
+    if(products?.length > 0) {
+      const filteredProducts = products.filter(p => p.selected);
+      setSelectedProducts(filteredProducts);
+    }
+  }, [])
+
   return (
     <div>
       <header >
@@ -68,13 +78,25 @@ const Checkout = () => {
       </div>
       <div className={`${styles.checkoutText} ${styles.center}`}>
         <div className={styles.wrapper}>
+          <div className={styles.checkoutProducts}>
+            {selectedProducts.map(p => {
+              return (
+                <div className={styles.checkoutProductsItem} key={p.id}>
+                  <img src={p.img} alt={p.title} />
+                  <p className={styles.checkoutProductsTitle}>{p.title}</p>
+                  <p>{p.price}</p>
+                </div>
+              )
+            })
+            }
+          </div>
           <p className={styles.checkoutTitle}>Гайд “Календарь развития ребенка”</p>
           <p>
-            Итого: <b>790 ₽</b>
+            Итого: <b>{totalSum}</b>
           </p>
           <p className={styles.checkoutDescription}>
             Укажите свою действующую почту, к которой у вас есть доступ.
-            После оплаты на указанную вами почту придет ссылка для скачивания Гайда.
+            После оплаты на указанную вами почту придет ссылка для скачивания материала.
           </p>
           <div className={styles.checkoutBox}>
             <input

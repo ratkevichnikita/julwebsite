@@ -75,7 +75,7 @@ const ProductsSingle = ({addToCart,productsList}) => {
             </div>
             {currentProduct.video &&
               <div className="c-product-video">
-                <h2>Видеообзор книги</h2>
+                <h2>Видеообзор</h2>
                 <YouTube
                   videoId={currentProduct.video}
                   opts={{

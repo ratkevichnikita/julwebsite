@@ -131,6 +131,7 @@
 .prod__card-img {
   flex-shrink: 0;
   margin: 0 5px;
+  width: 46px;
 }
 .prod__card-arrow {
   flex-shrink: 0;

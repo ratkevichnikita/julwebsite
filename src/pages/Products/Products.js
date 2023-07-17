@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 //components
 import Header from "../../components/Header/Header";
 import Sorting from "../../components/Sorting/Sorting";
@@ -26,7 +26,9 @@ const Products = ({setSortByCategories,setSortByTopics,productsList,addToCart}) 
               ? productsList.map(p => {
                   return (
                       <div key={p.id} className={"products-item"}>
-                        <img className={"products-img"} src={p.img} alt={p.name}/>
+                        <button className={"products-image"} onClick={() => goToSingle(p.id)}>
+                          <img className={"products-img"} src={p.img} alt={p.name}/>
+                        </button>
                         <p className={"products-title"}>{p.title}</p>
                         <div className="products-inner">
                           <p className={"products-price"}>{p.price} ₽</p>
