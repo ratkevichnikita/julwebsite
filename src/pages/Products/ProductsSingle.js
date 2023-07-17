@@ -44,7 +44,7 @@ const ProductsSingle = ({addToCart,productsList}) => {
                 <p className={"c-product-price"}>Цена: <span>{currentProduct.price} ₽ </span></p>
                 <p className={"c-product-age"}>Возраст: <span>{currentProduct.age}</span></p>
               </div>
-              <button onClick={() => addToCart(currentProduct)} className={currentProduct.selected ? 'primary-btn selected' : 'primary-btn'}>{currentProduct.selected ? 'В корзине' : 'В корзинy'}</button>
+              <button onClick={() => addToCart(currentProduct)} className={currentProduct.selected ? 'primary-btn c-product-cart selected' : 'primary-btn c-product-cart'}>{currentProduct.selected ? 'В корзине' : 'В корзину'}</button>
             </div>
             <div className="c-product-tabs">
               <div className="c-product-tabs-caption">

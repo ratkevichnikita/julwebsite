@@ -80,11 +80,13 @@ const Main = () => {
                           виде.
                         </p>
                       </div>
-                      <div className="prod__card-img">
-                        <img src={toy} alt="Иконка игрушки" />
-                      </div>
-                      <div className="prod__card-arrow">
-                        <img src={smallArrow} alt="стрелочка" />
+                      <div className="prod__card-box">
+                        <div className="prod__card-img">
+                          <img src={toy} alt="Иконка игрушки" />
+                        </div>
+                        <div className="prod__card-arrow">
+                          <img src={smallArrow} alt="стрелочка" />
+                        </div>
                       </div>
                     </div>
                     <div onClick={() => navigate('/calendar')} className="prod__card">

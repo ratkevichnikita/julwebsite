@@ -1,9 +1,11 @@
 import React, {useState, useEffect, useContext} from 'react';
 import './cart.css'
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {Context} from "../../context";
 
 const Cart = () => {
+
+  const navigate = useNavigate();
 
   const [cartModalActive, setCartModalActive] = useState(false);
   const {cartProducts,addToCart} = useContext(Context)
@@ -49,7 +51,7 @@ const Cart = () => {
                     </svg>
                   </div>
                 )}
-                <Link className={"primary-btn small cart-modal-btn"} to={'/'}>Оформить</Link>
+                <button className={"primary-btn small cart-modal-btn"} onClick={() => navigate('/checkout')} >Оформить</button>
               </>
             </div>
           </div>
