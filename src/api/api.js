@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const createPayment = async (totalSum,paymentActions,productsNames,emailField) => {
+export const createPayment = async (totalSum,paymentActions,products,emailField) => {
   try {
     const payment = await axios({
       method: 'POST',
@@ -11,7 +11,7 @@ export const createPayment = async (totalSum,paymentActions,productsNames,emailF
       url: 'https://api.bslackers.ru/createPayment',
       data: {
         sum: totalSum,
-        productsNames,
+        products,
         emailField
       }
     })

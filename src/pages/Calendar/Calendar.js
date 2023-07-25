@@ -60,7 +60,7 @@ const Calendar = () => {
       <header className={styles.hero}>
         <div className={styles.wrapper}>
           <div className={styles.header}>
-            <Link to={'https://www.instagram.com/momjulee/'} target="_blank" className={styles.headerLogo}>
+            <Link to={'/'} className={styles.headerLogo}>
               @momjulee
             </Link>
             <div className={styles.headerAdv}>

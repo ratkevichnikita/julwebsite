@@ -49,7 +49,7 @@
   color: #FFFFFF;
   width: 100%;
   padding: 15px 0;
-  background-color: #CD5352;
+  background-color: #567892;
   border-radius: 5px;
 }
 
@@ -87,7 +87,13 @@
 .checkoutProductsItem {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   text-align: left;
+}
+
+.checkoutProductsBox {
+  display: flex;
+  align-items: center;
 }
 
 .checkoutProductsItem:not(:last-child) {

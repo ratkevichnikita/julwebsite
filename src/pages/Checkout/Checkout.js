@@ -8,7 +8,8 @@ import {emailRegex} from "../../utils/helpers";
 const Checkout = () => {
 
   const { paymentActions, totalSum } = useContext(Context);
-  const [selectedProducts, setSelectedProducts] = useState([])
+  const [selectedProducts, setSelectedProducts] = useState([]);
+  const [shopProducts, setShopProducts] = useState([]);
   const products = JSON.parse(localStorage.getItem('products'));
 
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const Checkout = () => {
   const onHandleClick = () => {
     if(!validationFiled.error && emailField !== '') {
       const email = emailField.trim();
-      createPayment(totalSum, paymentActions,'Гайд: календарь развития ребенка', email)
+      createPayment(totalSum, paymentActions, shopProducts, email)
       {window.yaCounter93983666.reachGoal('ya-payment.js')}
     } else {
       if(emailField === '') {
@@ -51,7 +52,15 @@ const Checkout = () => {
   useEffect(() => {
     if(products?.length > 0) {
       const filteredProducts = products.filter(p => p.selected);
+      const metaProducts = filteredProducts.map(item => {
+        return {
+          name: item.shortTitle,
+          link: item.link,
+          price: item.price
+        }
+      })
       setSelectedProducts(filteredProducts);
+      setShopProducts(metaProducts)
     }
   }, [])
 
@@ -59,8 +68,8 @@ const Checkout = () => {
     <div>
       <header >
         <div className={styles.wrapper}>
-          <div className={styles.paymentHeader}>
-            <Link to={'https://www.instagram.com/momjulee/'} target="_blank" className="logo">
+          <div className={styles.checkoutHeader}>
+            <Link to={'/'} className="logo">
               @momjulee
             </Link>
           </div>
@@ -82,17 +91,18 @@ const Checkout = () => {
             {selectedProducts.map(p => {
               return (
                 <div className={styles.checkoutProductsItem} key={p.id}>
-                  <img src={p.img} alt={p.title} />
-                  <p className={styles.checkoutProductsTitle}>{p.title}</p>
+                  <div className={styles.checkoutProductsBox}>
+                    <img src={p.img} alt={p.title} />
+                    <p className={styles.checkoutProductsTitle}>{p.title}</p>
+                  </div>
                   <p>{p.price}</p>
                 </div>
               )
             })
             }
           </div>
-          <p className={styles.checkoutTitle}>Гайд “Календарь развития ребенка”</p>
           <p>
-            Итого: <b>{totalSum}</b>
+            Итого: <b>{totalSum} рублей</b>
           </p>
           <p className={styles.checkoutDescription}>
             Укажите свою действующую почту, к которой у вас есть доступ.

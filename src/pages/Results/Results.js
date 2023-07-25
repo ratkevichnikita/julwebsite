@@ -45,7 +45,7 @@ const Results = ({paymentInfo}) => {
     <div className={"payment-results "}>
       <header >
         <div className="wrapper">
-          <div className="gayd-header">
+          <div className="payment-results-header">
             <Link to={'https://www.instagram.com/momjulee/'} target="_blank" className="logo">
               @momjulee
             </Link>
@@ -73,7 +73,7 @@ const Results = ({paymentInfo}) => {
            </div>
          }
 
-         <button onClick={() => navigate('/calendar')} className={"payment-results-button"}>Вернуться к товарам</button>
+         <button onClick={() => navigate('/')} className={"payment-results-button"}>Вернуться к товарам</button>
        </div>
     </div>
   );
