@@ -9,6 +9,7 @@ export const createPayment = async (totalSum,paymentActions,products,emailField)
         'Content-Type': 'application/json',
       },
       url: 'https://api.bslackers.ru/createPayment',
+      // url: 'http://localhost:8000/createPayment',
       data: {
         sum: totalSum,
         products,
@@ -33,6 +34,7 @@ export const checkPaymentStatus = async (paymentId,setPaymentInfo, setLoading) =
         'X-Requested-With': 'XMLHttpRequest'
       },
       url: 'https://api.bslackers.ru/checkPaymentStatus',
+      // url: 'http://localhost:8000/checkPaymentStatus',
       data: {
         paymentId
       }
@@ -47,17 +49,3 @@ export const checkPaymentStatus = async (paymentId,setPaymentInfo, setLoading) =
   }
 }
 
-// export const sendMail = async () => {
-//   try {
-//     const mailInfo = await axios({
-//       method: 'POST',
-//       headers: {
-//         'X-Requested-With': 'XMLHttpRequest'
-//       },
-//       url: 'https://api.bslackers.ru/sendMail',
-//     })
-//     console.log('mailInfo',mailInfo)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }

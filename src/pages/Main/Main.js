@@ -108,7 +108,7 @@ const Main = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="prod__item">
+                  <Link target={"_blank"} to={"https://wa.me/79506749016?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F..."} className="prod__item">
                     <div className="prod__caption">
                       Для взрослых
                     </div>
@@ -131,7 +131,7 @@ const Main = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                   <div className="prod__item closed">
                     <div className="prod__card">
                       <div className="prod__card-inner">
@@ -141,26 +141,6 @@ const Main = () => {
                         </div>
                         <p className="prod__card-description">
                           Для тех, кто затр*хался жить в “дне сурка”, и хочет перемен.
-                        </p>
-                      </div>
-                      <div className="prod__card-box">
-                        <div className="prod__card-img">
-                          <img src={inwork} alt="Иконка игрушки" />
-                        </div>
-                        <div className="prod__card-arrow">
-                          <img src={close} alt="стрелочка" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="prod__item closed">
-                    <div className="prod__card">
-                      <div className="prod__card-inner">
-                        <div className="prod__card-title">
-                          Вдохновение и мотивация.
-                        </div>
-                        <p className="prod__card-description">
-                          Мои мысли, мой опыт и мои инструменты, которые помогают идти к целям, не сливаться и жить кайфово.
                         </p>
                       </div>
                       <div className="prod__card-box">
@@ -183,14 +163,14 @@ const Main = () => {
             <img className="star6" src={star6} alt="звездочка" />
               <img className="question__img1" src={q1} alt="" />
                 <img className="question__img2" src={q2} alt="" />
-                  <h2>
-                    Задать <br />
-                    мне вопрос
-                  </h2>
-                  <a href="https://t.me/Juleera" rel="nofollow noreferrer" target="_blank" className="button">
-                    <img src={telegram} alt="телеграм" />
-                      Telegram
-                  </a>
+                  {/*<h2>*/}
+                  {/*  Задать <br />*/}
+                  {/*  мне вопрос*/}
+                  {/*</h2>*/}
+                  {/*<a href="https://t.me/Juleera" rel="nofollow noreferrer" target="_blank" className="button">*/}
+                  {/*  <img src={telegram} alt="телеграм" />*/}
+                  {/*    Telegram*/}
+                  {/*</a>*/}
           </div>
         </div>
       </section>
@@ -203,8 +183,8 @@ const Main = () => {
             <div className="social__list">
               <div className="social__item">
                 <p>
-                  Друзья, кому интересны только идеи детских поделок, без моих продуктов, подписывайте на мой
-                  телеграм-канал: <br />
+                  Друзья, кому интересны только идеи детских поделок,
+                  в удобном формате для вас мой телеграм-канал:
                   “ДЕТСКОЕ РАЗВИТИЕ И ТВОРЧЕСТВО”
                   <img src={arrow} alt="стрелка" />
                 </p>
@@ -215,8 +195,8 @@ const Main = () => {
               </div>
               <div className="social__item">
                 <p>
-                  Кому жутко неудобно сидеть в инстаграме из-за всей этой полит хрени, для вас моя группа во Вконтакте,
-                  где я дублирую всю полезнятину из инстаграма: <br />
+                  Кому жутко неудобно сидеть в инстаграме из-за vpn-ов, для вас моя группа во Вконтакте,
+                  где я дублирую всю полезнятину из инстаграма: <br/>
                   “Юля / Детские поделки / Творчество / Развивашки”
                   <img src={arrow} alt="стрелка" />
                 </p>

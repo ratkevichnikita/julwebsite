@@ -152,12 +152,12 @@
 .question__img1 {
   position: absolute;
   right: 0;
-  bottom: 150px;
+  bottom: 0px;
 }
 .question__img2 {
   position: absolute;
   right: 90px;
-  bottom: 110px;
+  bottom: 20px;
 }
 
 .social {
