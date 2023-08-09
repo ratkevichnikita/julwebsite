@@ -31,7 +31,12 @@ import adv3 from "../../images/calendar/adv3.svg";
 import adv4 from "../../images/calendar/adv4.svg";
 import time from '../../images/calendar/time.webp';
 import time2 from '../../images/calendar/time2.webp';
-import discount from '../../images/calendar/discount.webp';
+import author from '../../images/calendar/author.webp';
+import instaInfo from '../../images/calendar/instaInfo.webp';
+import calendar from '../../images/calendar/cover.webp';
+import clouds from '../../images/calendar/clouds.webp';
+import cloudsMobile from '../../images/calendar/cloudsmobile.webp';
+// import discount from '../../images/calendar/discount.webp';
 // import Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
@@ -96,7 +101,7 @@ const Calendar = () => {
             <div className={styles.offerTitle}>
               <h1>Раскройте потенциал вашего ребенка с помощью Календаря развития</h1>
               <p>Вся необходимая информация о развитии малыша с рождения и до пяти лет в одном месте.</p>
-              <button onClick={() => handleClick()} className={styles.button}>Купить календарь</button>
+              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>
             </div>
           </div>
           <div className={`${styles.headerAdv} ${styles.mobile}`}>
@@ -115,24 +120,24 @@ const Calendar = () => {
           </div>
         </div>
       </header>
-      <section className={`${styles.section} ${styles.bg}`}>
-        <div className={styles.wrapper}>
-          <div className={styles.discount}>
-            <div className={styles.discountInfo}>
-              <h2>
-                Специальное предложение <span className={styles.discountColor}>790 ₽</span> вместо <span className={styles.discountCross}>1300 ₽ !</span>
-              </h2>
-              <p>
-                Вся польза о правильном развитии вашего малыша в одном месте!
-              </p>
-              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>
-            </div>
-            <div className={styles.discountCounter}>
-              <img src={discount} alt="Фото Календаря развития Юлии Раткевич"/>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/*<section className={`${styles.section} ${styles.bg}`}>*/}
+      {/*  <div className={styles.wrapper}>*/}
+      {/*    <div className={styles.discount}>*/}
+      {/*      <div className={styles.discountInfo}>*/}
+      {/*        <h2>*/}
+      {/*          Специальное предложение <span className={styles.discountColor}>790 ₽</span> вместо <span className={styles.discountCross}>1300 ₽ !</span>*/}
+      {/*        </h2>*/}
+      {/*        <p>*/}
+      {/*          Вся польза о правильном развитии вашего малыша в одном месте!*/}
+      {/*        </p>*/}
+      {/*        <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
+      {/*      </div>*/}
+      {/*      <div className={styles.discountCounter}>*/}
+      {/*        <img src={discount} alt="Фото Календаря развития Юлии Раткевич"/>*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
       <section className={styles.section}>
         <div className={styles.wrapper}>
           <div className={styles.center}>
@@ -142,7 +147,7 @@ const Calendar = () => {
           </div>
         </div>
       </section>
-      <section className={`${styles.section} ${styles.who}`}>
+      <section className={`${styles.section} ${styles.bg} ${styles.who}`}>
         <div className={styles.wrapper}>
           <div>
             <h2 className={styles.whoTitle}>Кому подойдет?</h2>
@@ -181,7 +186,7 @@ const Calendar = () => {
               </div>
             </div>
             <img className={styles.feeds} src={feeds} alt="картинка листка"/>
-            <button onClick={() => handleClick()} className={styles.button}>Купить календарь</button>
+            <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>
           </div>
         </div>
       </section>
@@ -222,6 +227,20 @@ const Calendar = () => {
               }
             </div>
           </div>
+        </div>
+      </section>
+      <section className={styles.section}>
+        <div className={styles.wrapper}>
+            <div className={styles.questions}>
+              <h2>
+                “Календарь” ответит на все волнующие Вас вопросы
+              </h2>
+              <div className={styles.questionsContent}>
+                <img className={styles.questionsImage} src={clouds} alt="Фотография мамы и малыша"/>
+                <img className={styles.questionsImage2} src={cloudsMobile} alt="Фотография мамы и малыша"/>
+              </div>
+              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>
+            </div>
         </div>
       </section>
       <section className={`${styles.section} ${styles.bg}`} >
@@ -266,82 +285,127 @@ const Calendar = () => {
                   </span>
                 </div>
               </div>
-              <button onClick={() => handleClick()} className={styles.button}>Купить календарь</button>
+              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>
             </div>
 
           </div>
+      </section>
+
+      {/*<section className={`${styles.section} ${styles.bg}`}>*/}
+      {/*  <div className={styles.wrapper}>*/}
+      {/*    <div className={styles.discount}>*/}
+      {/*      <div className={styles.discountInfo}>*/}
+      {/*        <h2>*/}
+      {/*          Специальное предложение <span className={styles.discountColor}>790 ₽</span> вместо <span className={styles.discountCross}>1300 ₽ !</span>*/}
+      {/*        </h2>*/}
+      {/*        <p>*/}
+      {/*          Вся польза о правильном развитии вашего малыша в одном месте!*/}
+      {/*        </p>*/}
+      {/*        <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
+      {/*      </div>*/}
+      {/*      <div className={styles.discountCounter}>*/}
+      {/*        <img src={discount} alt="Фото Календаря развития Юлии Раткевич"/>*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
+      <section className={styles.section}>
+        <div className={styles.wrapper}>
+          <div className={styles.author}>
+            <div className={styles.authorContent}>
+              <div className={styles.authorImage}>
+                <img src={author} alt="Фотография Юлии раткевич и ее дочки Варвары"/>
+              </div>
+              <div className={styles.authorInfo}>
+                <h2>Об авторе ...</h2>
+                <p>Календарь составлен мамой для мам.</p>
+                <p>
+                  Юлия Раткевич — мама четырехлетней доченьки и автор самого тёплого и уютного блога о детском развитии и творчестве в инстаграм.
+                  Поэтому в “Календаре” только важное, нужное, проверенное.
+                </p>
+                <img src={instaInfo} alt="статистикиа инстарамма"/>
+                <p>
+                  “Календарь” — помощник создан для того, чтобы ответить на распространенные вопросы быстро, без траты времени на поиски качественной информации в интернете.
+                  Иногда — до того, как эти вопросы появились
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section className={styles.section}>
         <div className={styles.wrapper}>
           <div className={styles.reviews}>
             <div className={`${styles.reviewsTitle} ${styles.center}`}>
               <h2>Отзывы</h2>
-              <p>Уже больше 1000 родителей преобрели Календарь развития. <br/> Благодарю каждого за отзыв.</p>
+              <p>Уже больше 200 родителей преобрели Календарь развития. <br/> Благодарю каждого за отзыв.</p>
             </div>
             <div className={styles.reviewsContent}>
-                <Swiper
-                  slidesPerView={1}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  modules={[Pagination, Navigation]}
-                  breakpoints={{
-                    768: {
-                      // width: 768,
-                      slidesPerView: 3,
-                      navigation:true,
-                    },
-                  }}
-                  navigation={true}
-                  className={styles.reviewsSlider}
-                >
-                  <SwiperSlide>
-                    <img src={review1} alt="Отзыв о календаре развитии"/>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={review2} alt="Отзыв о календаре развитии"/>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={review3} alt="Отзыв о календаре развитии"/>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={review4} alt="Отзыв о календаре развитии"/>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={review5} alt="Отзыв о календаре развитии"/>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={review6} alt="Отзыв о календаре развитии"/>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={review7} alt="Отзыв о календаре развитии"/>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={review8} alt="Отзыв о календаре развитии"/>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={review9} alt="Отзыв о календаре развитии"/>
-                  </SwiperSlide>
-                </Swiper>
+              <Swiper
+                slidesPerView={1}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[Pagination, Navigation]}
+                breakpoints={{
+                  768: {
+                    // width: 768,
+                    slidesPerView: 3,
+                    navigation:true,
+                  },
+                }}
+                navigation={true}
+                className={styles.reviewsSlider}
+              >
+                <SwiperSlide>
+                  <img src={review1} alt="Отзыв о календаре развитии"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={review2} alt="Отзыв о календаре развитии"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={review3} alt="Отзыв о календаре развитии"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={review4} alt="Отзыв о календаре развитии"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={review5} alt="Отзыв о календаре развитии"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={review6} alt="Отзыв о календаре развитии"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={review7} alt="Отзыв о календаре развитии"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={review8} alt="Отзыв о календаре развитии"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src={review9} alt="Отзыв о календаре развитии"/>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </div>
       </section>
       <section className={`${styles.section} ${styles.bg}`}>
         <div className={styles.wrapper}>
-          <div className={styles.discount}>
-            <div className={styles.discountInfo}>
-              <h2>
-                Специальное предложение <span className={styles.discountColor}>790 ₽</span> вместо <span className={styles.discountCross}>1300 ₽ !</span>
-              </h2>
-              <p>
-                Вся польза о правильном развитии вашего малыша в одном месте!
-              </p>
-              <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>
-            </div>
-            <div className={styles.discountCounter}>
-              <img src={discount} alt="Фото Календаря развития Юлии Раткевич"/>
-            </div>
+          <div className={styles.literature}>
+              <div className={styles.literatureInfo}>
+                <h2>Проверено и рекомендовано!</h2>
+                <p>
+                  Вся информация в Календаре была собрана, обработана очищена от воды и бесполезной рекламы, сжата и красиво оформлена в удобный и практичный Гайд-книгу.
+                </p>
+                <p>
+                  Кроме того, вся конечная подготовленная и обработанная информация прошла проверку у действующего и практикующего педагога-психолога.
+                </p>
+                <p>
+                  “Календарь развития ребенка” - это настольная книга для любых родителей, кто хочет правильно развивать и понимать своего ребенка от 0-5 лет.
+                </p>
+                <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>
+              </div>
+              <img src={calendar} alt="фотография Календаря развития"/>
           </div>
         </div>
       </section>

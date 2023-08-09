@@ -15,6 +15,7 @@ const NotFoundLazy = lazy(() => import('./pages/NotFound/NotFound'))
 const CalendarLazy = lazy(() => import('./pages/Calendar/Calendar'))
 const CalendarPaymentLazy = lazy(() => import('./pages/Calendar/CalendarPayment'))
 const OfertaLazy = lazy(() => import('./pages/Oferta/Oferta'))
+const PromoLazy = lazy(() => import('./pages/Promo/Promo'))
 
 function App() {
   const [cartProducts, setCartProducts] = useState([]);
@@ -136,6 +137,7 @@ function App() {
           <Route path={'/calendar'} exact element={<Suspense fallback={"Загрузка..."} > <CalendarLazy /></Suspense>} />
           <Route path={'/calendarPayment'} exact element={<Suspense fallback={"Загрузка..."} > <CalendarPaymentLazy /></Suspense>} />
           <Route path={'/oferta'} exact element={<Suspense fallback={"Загрузка..."} > <OfertaLazy /> </Suspense>} />
+          <Route path={'/promo/:title'} exact element={<Suspense fallback={"Загрузка..."} > <PromoLazy /> </Suspense>} />
           <Route path={'*'} exact element={<Suspense fallback={"Загрузка..."} > <NotFoundLazy /> </Suspense>} />
         </Routes>
       </Context.Provider>
