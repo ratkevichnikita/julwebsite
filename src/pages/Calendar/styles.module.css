@@ -144,6 +144,8 @@
 
 .button {
   max-width: 300px;
+  display: block;
+  margin: 0 auto;
   background-color: #CD5352;
   text-align: center;
   padding: 17px 0;

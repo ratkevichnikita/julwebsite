@@ -63,16 +63,18 @@ const Results = ({paymentInfo}) => {
              {paymentMessages?.link &&
                <Link to={paymentMessages?.link} className={"payment-results-subbutton"} >Продолжить оплату</Link>
              }
-             {paymentMessages?.email &&
+             {(paymentMessages?.email && paymentMessages?.email !== 'yulia.ratkevich@mail.ru') &&
                <div className={"payment-results-success text-center"}>
                  Мы выслали на вашу почту <b>{paymentMessages?.email}</b> письмо с ссылкой для скачивания файла.
                  если по какой-то причине письмо не пришло, пожалуйста свяжитесь с
                  <Link target={"_blank"} to={"https://t.me/juleera"} >Юлией</Link>
                </div>
              }
+             {paymentMessages.email === 'yulia.ratkevich@mail.ru' &&
+               <div>Ваше "Спасибо" доставлено Юлии. Благодарим вас от чистого сердца</div>
+             }
            </div>
          }
-
          <button onClick={() => navigate('/')} className={"payment-results-button"}>Вернуться к товарам</button>
        </div>
     </div>
