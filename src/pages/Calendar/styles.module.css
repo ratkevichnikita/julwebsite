@@ -144,8 +144,7 @@
 
 .button {
   max-width: 300px;
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
   background-color: #CD5352;
   text-align: center;
   padding: 17px 0;
@@ -154,6 +153,8 @@
   text-transform: uppercase;
   color: #fff;
   border-radius: 5px;
+  position: relative;
+  z-index: 10;
 }
 
 .headerAdv {
@@ -234,6 +235,11 @@
 }
 
 .who button {
+  margin: 0 auto;
+  display: block;
+}
+
+.center {
   margin: 0 auto;
   display: block;
 }
@@ -630,7 +636,4 @@
   .questionsImage {
     display: none;
   }
-
-
-
 }

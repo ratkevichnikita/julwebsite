@@ -97,7 +97,7 @@ const Calendar = () => {
               <h1>Раскройте потенциал вашего ребенка с помощью Календаря развития</h1>
               <p>Вся необходимая информация о развитии малыша с рождения и до пяти лет в одном месте.</p>
               {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-              <Link to={"https://payform.ru/lw2M3IN/"} className={styles.button} target={"_blank"}>Купить календарь за 790 ₽</Link>
+              <Link to={"https://payform.ru/lw2M3IN/"} className={styles.button}>Купить календарь за 790 ₽</Link>
             </div>
           </div>
           <div className={`${styles.headerAdv} ${styles.mobile}`}>
@@ -165,7 +165,7 @@ const Calendar = () => {
             </div>
             <img className={styles.feeds} src={feeds} alt="картинка листка"/>
             {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-            <Link to={"https://payform.ru/lw2M3IN/"} className={styles.button} target={"_blank"}>Купить календарь за 790 ₽</Link>
+            <Link to={"https://payform.ru/lw2M3IN/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
           </div>
         </div>
       </section>
@@ -219,7 +219,7 @@ const Calendar = () => {
                 <img className={styles.questionsImage2} src={cloudsMobile} alt="Фотография мамы и малыша"/>
               </div>
               {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-              <Link to={"https://payform.ru/lw2M3IN/"} className={styles.button} target={"_blank"}>Купить календарь за 790 ₽</Link>
+              <Link to={"https://payform.ru/lw2M3IN/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
             </div>
         </div>
       </section>
@@ -266,30 +266,11 @@ const Calendar = () => {
                 </div>
               </div>
               {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-              <Link to={"https://payform.ru/lw2M3IN/"} className={styles.button} target={"_blank"}>Купить календарь за 790 ₽</Link>
+              <Link to={"https://payform.ru/lw2M3IN/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
             </div>
 
           </div>
       </section>
-
-      {/*<section className={`${styles.section} ${styles.bg}`}>*/}
-      {/*  <div className={styles.wrapper}>*/}
-      {/*    <div className={styles.discount}>*/}
-      {/*      <div className={styles.discountInfo}>*/}
-      {/*        <h2>*/}
-      {/*          Специальное предложение <span className={styles.discountColor}>790 ₽</span> вместо <span className={styles.discountCross}>1300 ₽ !</span>*/}
-      {/*        </h2>*/}
-      {/*        <p>*/}
-      {/*          Вся польза о правильном развитии вашего малыша в одном месте!*/}
-      {/*        </p>*/}
-      {/*        <button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-      {/*      </div>*/}
-      {/*      <div className={styles.discountCounter}>*/}
-      {/*        <img src={discount} alt="Фото Календаря развития Юлии Раткевич"/>*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-      {/*  </div>*/}
-      {/*</section>*/}
       <section className={styles.section}>
         <div className={styles.wrapper}>
           <div className={styles.author}>
@@ -385,7 +366,7 @@ const Calendar = () => {
                   “Календарь развития ребенка” - это настольная книга для любых родителей, кто хочет правильно развивать и понимать своего ребенка от 0-5 лет.
                 </p>
                 {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-                <Link to={"https://payform.ru/lw2M3IN/"} className={styles.button} target={"_blank"}>Купить календарь за 790 ₽</Link>
+                <Link to={"https://payform.ru/lw2M3IN/"} className={styles.button} >Купить календарь за 790 ₽</Link>
               </div>
               <img src={calendar} alt="фотография Календаря развития"/>
           </div>
