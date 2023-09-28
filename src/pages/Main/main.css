@@ -5,6 +5,11 @@
   position: relative;
 }
 
+.insta-link {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .button {
   width: 100%;
   display: flex;
@@ -34,52 +39,7 @@
   border-radius: 50%;
 }
 
-.offer {
-  padding-top: 150px;
-  position: relative;
-}
-.offer .star1 {
-  position: absolute;
-  top: 65px;
-  left: 110px;
-}
-.offer .star2 {
-  position: absolute;
-  top: 0;
-  left: 195px;
-}
-.offer .star3 {
-  position: absolute;
-  left: 190px;
-  top: 220px;
-}
-.offer__img {
-  position: absolute;
-  right: -60px;
-  top: 0;
-  transform: scale(0.9);
-}
-.offer__title h1 {
-  margin-bottom: 20px;
-}
-.offer__decor {
-  position: absolute;
-  left: 40px;
-  bottom: -40px;
-}
-.offer__desc {
-  position: relative;
-  padding-right: 15px;
-}
-.offer__arrow {
-  position: absolute;
-  right: -16px;
-  bottom: 5px;
-  transform: translateY(100%);
-}
-
 .prod {
-  padding-bottom: 120px;
   position: relative;
 }
 .prod .star4 {
@@ -136,30 +96,6 @@
 .prod__card-arrow {
   flex-shrink: 0;
 }
-
-.question {
-  padding-top: 20px;
-  position: relative;
-}
-.question .star6 {
-  position: absolute;
-  left: 80px;
-  top: -20px;
-}
-.question h2 {
-  margin-bottom: 20px;
-}
-.question__img1 {
-  position: absolute;
-  right: 0;
-  bottom: 0px;
-}
-.question__img2 {
-  position: absolute;
-  right: 90px;
-  bottom: 20px;
-}
-
 .social {
   overflow: hidden;
 }

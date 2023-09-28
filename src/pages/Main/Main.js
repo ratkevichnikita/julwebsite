@@ -2,82 +2,33 @@ import React from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import './main.css';
 //images
-import star from '../../images/main/star.svg';
-import star1 from '../../images/main/star1.svg';
-import star2 from '../../images/main/star2.svg';
-import star3 from '../../images/main/star3.svg';
-import star4 from '../../images/main/star4.svg';
-import star5 from '../../images/main/star5.svg';
-import star6 from '../../images/main/star6.svg';
 import arrow from '../../images/arrow.svg';
 import toy from '../../images/main/toy.svg';
-import q1 from '../../images/main/q1.webp';
-import q2 from '../../images/main/q2.webp';
 import smallArrow from '../../images/main/small-arrow.svg';
-import avatar from '../../images/main/avatar.webp';
 import emodzi from '../../images/main/emodzi.webp';
 import inwork from '../../images/main/inwork.svg';
 import close from '../../images/main/close.svg';
 import telegram from '../../images/telegram.svg';
-import vk from '../../images/main/vk.svg';
+import ideas from '../../images/main/ideas.svg';
 import calendar from '../../images/main/calendarcover.webp';
 
 const Main = () => {
   const navigate = useNavigate();
   return (
     <>
-      <header className="header">
+      <section className="section">
         <div className="wrapper">
-          <Link to={'/'} href="#" className="logo">
-            @momjulee
-          </Link>
-          <div className="offer">
-              <img className="star1" src={star1} alt="звездочка" />
-              <img className="star2" src={star2} alt="звездочка" />
-              <img className="star3" src={star3} alt="звездочка" />
-              <img className="offer__decor" src={star} alt="звезда" />
-              <div className="offer__title">
-                  <h1>
-                    Привет, <br /> я — Юля!
-                  </h1>
-                  <div className="offer__desc">
-                    <p>
-                      Я просто обожаю творить и вдохновлять!
-                    </p>
-                    <p>
-                      Обожаю свою работу и свою жизнь!
-                    </p>
-                    <p>
-                      Добро пожаловать в моё пространство, выбирай то,
-                      что тебя интересует и проходи по ссылке.
-                    </p>
-                    <img className="offer__arrow" src={arrow} alt="стрелка" />
-                  </div>
-                </div>
-              <div className="offer__img">
-                <img src={avatar} alt="Юлия Раткевич" />
-              </div>
-          </div>
-        </div>
-      </header>
-      <section className="section bg">
-        <div className="wrapper">
+          <Link className={"insta-link"} to={"https://www.instagram.com/momjulee/"}>@momjulee</Link>
           <div className="prod">
-            <img className="star4" src={star4} alt="звездочка" />
-              <img className="star5" src={star5} alt="звездочка" />
                 <div className="prod__list">
                   <div className="prod__item">
-                    <div className="prod__caption">
-                      Для детей
-                    </div>
                     <div onClick={() => navigate('/products')} className="prod__card">
                       <div className="prod__card-inner">
                         <div className="propd__card-title">
-                          Развивашки для детей. Пособия.
+                          Развивающие пособия для детей.
                         </div>
                         <p className="prod__card-description">
-                          Тут собраны все пособия для занятий с вашими детками, которые можно приобрести в электронном
-                          виде.
+                          Тут собраны все пособия для занятий с вашими детками, которые можно приобрести в электронном виде.
                         </p>
                       </div>
                       <div className="prod__card-box">
@@ -107,19 +58,35 @@ const Main = () => {
                         </div>
                       </div>
                     </div>
+                    <div onClick={() => navigate('/ideas')} className="prod__card">
+                      <div className="prod__card-inner">
+                        <div className="propd__card-title">
+                          Сборник идей и шаблонов для творчества
+                        </div>
+                        <p className="prod__card-description">
+                          100+ простых и интересных идей для детского развития и творчества.
+                        </p>
+                      </div>
+                      <div className="prod__card-box">
+                        <div className="prod__card-img">
+                          <img src={ideas} alt="Иконка игрушки" />
+                        </div>
+                        <div className="prod__card-arrow">
+                          <img src={smallArrow} alt="стрелочка" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <Link target={"_blank"} to={"https://wa.me/79506749016?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%F0%9F%91%8B%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F..."} className="prod__item">
-                    <div className="prod__caption">
-                      Для взрослых
-                    </div>
+
                     <div className="prod__card">
                       <div className="prod__card-inner">
                         <div className="propd__card-title">
-                          Встреча/Консультация
-                          со мной лично или онлайн.
+                          Встреча со мной лично или онлайн.
                         </div>
                         <p className="prod__card-description">
-                          Формат беседы, ответы на любые вопросы, консультации по ведению и развитию блога.
+                          Формат беседы, ответы на любые вопросы,
+                          заряд энергией и позитивом.
                         </p>
                       </div>
                       <div className="prod__card-box">
@@ -157,23 +124,6 @@ const Main = () => {
           </div>
         </div>
       </section>
-      <section className="section">
-        <div className="wrapper">
-          <div className="question">
-            <img className="star6" src={star6} alt="звездочка" />
-              <img className="question__img1" src={q1} alt="" />
-                <img className="question__img2" src={q2} alt="" />
-                  {/*<h2>*/}
-                  {/*  Задать <br />*/}
-                  {/*  мне вопрос*/}
-                  {/*</h2>*/}
-                  {/*<a href="https://t.me/Juleera" rel="nofollow noreferrer" target="_blank" className="button">*/}
-                  {/*  <img src={telegram} alt="телеграм" />*/}
-                  {/*    Telegram*/}
-                  {/*</a>*/}
-          </div>
-        </div>
-      </section>
       <section className="section bg">
         <div className="wrapper">
           <div className="social">
@@ -183,9 +133,8 @@ const Main = () => {
             <div className="social__list">
               <div className="social__item">
                 <p>
-                  Друзья, кому интересны только идеи детских поделок,
-                  в удобном формате для вас мой телеграм-канал:
-                  “ДЕТСКОЕ РАЗВИТИЕ И ТВОРЧЕСТВО”
+                  Друзья, подписывайтесь на мой телеграм канал.
+                  Там я каждую неделю делюсь полезными материалами для развития и творчества, которые можно скачивать.
                   <img src={arrow} alt="стрелка" />
                 </p>
                 <a href="https://t.me/detskoe_razvitie_tvorchestvo" rel="nofollow noreferrer" target="_blank" className="button">
@@ -193,20 +142,18 @@ const Main = () => {
                     Telegram
                 </a>
               </div>
-              <div className="social__item">
-                <p>
-                  Кому жутко неудобно сидеть в инстаграме из-за vpn-ов, для вас моя группа во Вконтакте,
-                  где я дублирую всю полезнятину из инстаграма: <br/>
-                  “Юля / Детские поделки / Творчество / Развивашки”
-                  <img src={arrow} alt="стрелка" />
-                </p>
-                <a href="https://vk.com/momjulee" rel="nofollow noreferrer" target="_blank" className="button">
-                  <img src={vk} alt="вконтакте" />
-                    Вконтакте
-                </a>
-              </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className={"section"}>
+        <div className="wrapper">
+          <p style={{marginBottom: "30px"}}>
+            Если вы хотите сказать нам Спасибо за идеи и наше творчество. Переходите по ссылке ниже.
+          </p>
+          <button  onClick={() => navigate('/donation')} className="button">
+            Сказать спасибо
+          </button>
         </div>
       </section>
     </>
