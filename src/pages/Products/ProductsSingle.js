@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 //  components
 import Header from "../../components/Header/Header";
 // styles
@@ -44,7 +44,7 @@ const ProductsSingle = ({addToCart,productsList}) => {
                 <p className={"c-product-price"}>Цена: <span>{currentProduct.price} ₽ </span></p>
                 <p className={"c-product-age"}>Возраст: <span>{currentProduct.age}</span></p>
               </div>
-              <button onClick={() => addToCart(currentProduct)} className={currentProduct.selected ? 'primary-btn c-product-cart selected' : 'primary-btn c-product-cart'}>{currentProduct.selected ? 'В корзине' : 'В корзину'}</button>
+              <Link to={currentProduct.link} className={'primary-btn c-product-cart'}>Купить</Link>
             </div>
             <div className="c-product-tabs">
               <div className="c-product-tabs-caption">

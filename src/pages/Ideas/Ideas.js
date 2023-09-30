@@ -6,6 +6,17 @@ import instagram from "../../images/imstagram.svg";
 import telegram from "../../images/ideas/tg.svg";
 import main from "../../images/ideas/ideas.webp";
 import ideas2 from '../../images/ideas/ideas2.webp';
+import img1 from '../../images/ideas/img1.webp';
+import img2 from '../../images/ideas/img2.webp';
+import img3 from '../../images/ideas/img3.webp';
+import img4 from '../../images/ideas/img4.webp';
+import img5 from '../../images/ideas/img5.webp';
+import img6 from '../../images/ideas/img6.webp';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper';
+import "swiper/css";
+import "swiper/css/pagination";
+import 'swiper/css/navigation';
 
 const Ideas = () => {
   return (
@@ -44,7 +55,7 @@ const Ideas = () => {
             <div className={styles.offerTitle}>
               <h1>Сборник простых идей и шаблонов для детского развития и творчества</h1>
               <p>В сборнике собаронно более 100 простых идей на разные темы и возраст с подробным описанием и необходимыми заготовки.</p>
-              <Link to={"https://payform.ru/ck2OJLV/"} className={styles.button}>Хочу сборник</Link>
+              <Link to={"https://payform.ru/ok2P0CU/"} className={styles.button}>Хочу сборник</Link>
             </div>
           </div>
           <div className={`${styles.headerAdv} ${styles.mobile}`}>
@@ -63,7 +74,7 @@ const Ideas = () => {
           </div>
         </div>
       </header>
-      <section className={styles.section}>
+      <section className={`${styles.section} ${styles.bg}`}>
         <div className={styles.wrapper}>
           <div className={styles.adv}>
             <img src={ideas2} alt="шаблоны для творчества"/>
@@ -84,6 +95,59 @@ const Ideas = () => {
                 - Заготовка в кадому шаблону. <span>Только распечатать</span>
               </li>
             </ul>
+
+          </div>
+        </div>
+      </section>
+      <section className={styles.section}>
+        <div className={styles.wrapper}>
+          <div className={styles.reviews}>
+            <h2 className={styles.reviewsTitle}>Наши идеи радуют детей по всему миру</h2>
+            <div className={styles.reviewsSlider}>
+              <Swiper
+                  slidesPerView={3}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  loop
+                  modules={[Pagination]}
+                  breakpoints={{
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 20
+                },
+                577: {
+                  slidesPerView: 2,
+                  spaceBetween: 20
+                },
+                992: {
+                  slidesPerView: 3,
+                  spaceBetween: 20
+                },
+              }}
+              >
+                  <SwiperSlide key={"1"}>
+                      <img src={img1} alt={"Фотография"} />
+                  </SwiperSlide>
+                  <SwiperSlide key={"2"}>
+                    <img src={img2} alt={"Фотография"} />
+                  </SwiperSlide>
+                  <SwiperSlide key={"3"}>
+                    <img src={img3} alt={"Фотография"} />
+                  </SwiperSlide>
+                  <SwiperSlide key={"4"}>
+                    <img src={img4} alt={"Фотография"} />
+                  </SwiperSlide>
+                  <SwiperSlide key={"5"}>
+                    <img src={img5} alt={"Фотография"} />
+                  </SwiperSlide>
+                  <SwiperSlide key={"6"}>
+                    <img src={img6} alt={"Фотография"} />
+                  </SwiperSlide>
+                </Swiper>
+            </div>
+            <Link to={"https://payform.ru/ok2P0CU/"} className={`${styles.button} ${styles.reviewsButton}`}>Хочу сборник</Link>
           </div>
         </div>
       </section>

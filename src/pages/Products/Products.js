@@ -4,7 +4,7 @@ import Header from "../../components/Header/Header";
 import Sorting from "../../components/Sorting/Sorting";
 //styles
 import './products.css';
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import MainButton from "../../components/MainButton/MainButton";
 
 const Products = ({setSortByCategories,setSortByTopics,productsList,addToCart}) => {
@@ -36,7 +36,7 @@ const Products = ({setSortByCategories,setSortByTopics,productsList,addToCart}) 
                         </div>
                         <div className="products-actions">
                           <button onClick={() => goToSingle(p.id)} className={'secondary-btn '}>Подробнее</button>
-                          <button onClick={() => addToCart(p)} className={p.selected ? 'primary-btn selected' : 'primary-btn'}>{p.selected ? 'В корзине' : 'В корзинy'}</button>
+                          <Link to={p.link} className={'primary-btn'}>Купить</Link>
                         </div>
                       </div>
                     )
@@ -45,7 +45,7 @@ const Products = ({setSortByCategories,setSortByTopics,productsList,addToCart}) 
             }
           </div>
         </div>
-        <MainButton />
+        {/*<MainButton />*/}
       </div>
     </div>
   );

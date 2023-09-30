@@ -7,9 +7,13 @@
   font-weight: 500;
 }
 
+.bg {
+  background-color: #F5F5F5;
+}
+
 .hero {
   overflow: hidden;
-  padding-bottom: 170px;
+  padding-bottom: 120px;
   position: relative;
 }
 
@@ -34,6 +38,7 @@
   top: 0;
   transform: translate(40px, -20px);
   z-index: -1;
+  width: 50%;
 }
 
 .offerTitle {
@@ -136,6 +141,18 @@
   color: #FF9000;
 }
 
+.reviewsTitle {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.reviews {
+ text-align: center;
+}
+
+.reviewsSlider {
+  margin-bottom: 50px;
+}
 
 @media screen and (max-width: 992px) {
   .headerAdv {

@@ -97,7 +97,7 @@ const Calendar = () => {
               <h1>Раскройте потенциал вашего ребенка с помощью Календаря развития</h1>
               <p>Вся необходимая информация о развитии малыша с рождения и до пяти лет в одном месте.</p>
               {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-              <Link to={"https://payform.ru/lw2M3IN/"} className={styles.button}>Купить календарь за 790 ₽</Link>
+              <Link to={"https://payform.ru/bl2P0w0/"} className={styles.button}>Купить календарь за 790 ₽</Link>
             </div>
           </div>
           <div className={`${styles.headerAdv} ${styles.mobile}`}>
@@ -165,7 +165,7 @@ const Calendar = () => {
             </div>
             <img className={styles.feeds} src={feeds} alt="картинка листка"/>
             {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-            <Link to={"https://payform.ru/lw2M3IN/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
+            <Link to={"https://payform.ru/bl2P0w0/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
           </div>
         </div>
       </section>
@@ -219,7 +219,7 @@ const Calendar = () => {
                 <img className={styles.questionsImage2} src={cloudsMobile} alt="Фотография мамы и малыша"/>
               </div>
               {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-              <Link to={"https://payform.ru/lw2M3IN/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
+              <Link to={"https://payform.ru/bl2P0w0/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
             </div>
         </div>
       </section>
@@ -266,7 +266,7 @@ const Calendar = () => {
                 </div>
               </div>
               {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-              <Link to={"https://payform.ru/lw2M3IN/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
+              <Link to={"https://payform.ru/bl2P0w0/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
             </div>
 
           </div>
@@ -366,7 +366,7 @@ const Calendar = () => {
                   “Календарь развития ребенка” - это настольная книга для любых родителей, кто хочет правильно развивать и понимать своего ребенка от 0-5 лет.
                 </p>
                 {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-                <Link to={"https://payform.ru/lw2M3IN/"} className={styles.button} >Купить календарь за 790 ₽</Link>
+                <Link to={"https://payform.ru/bl2P0w0/"} className={styles.button} >Купить календарь за 790 ₽</Link>
               </div>
               <img src={calendar} alt="фотография Календаря развития"/>
           </div>
@@ -378,13 +378,12 @@ const Calendar = () => {
           <div className="delivery-content">
             <p>
               Друзья! <br/>
-              Оплата на сайте доступна только для карт РФ.
+              Оплата на сайте доступна с карт со всего мира.
             </p>
             <p>
-              <b>Если у вас карты других стран</b>,<br/>
-              напишите мне личное сообщение <br/>
+              <b/>Если у вас возникли сложности с оплатой, напишите мне личное сообщение <br/>
               в WhatsApp
-            </p>
+              </p>
             <Link to={'https://wa.me/79506749016?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%F0%9F%91%8B%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C%2C%20%D1%80%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%20%D0%BF%D1%80%D0%BE%20%D0%B4%D1%80%D1%83%D0%B3%D0%B8%D0%B5%20%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D1%8B%20%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%8B'} >
               Написать в WhatsApp
               <img src={whatsapp} alt="Whatsapp Юлии Раткевич"/>
