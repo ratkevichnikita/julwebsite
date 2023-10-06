@@ -53,9 +53,9 @@ const Ideas = () => {
           <div className={styles.offer}>
             <img src={main} alt="Фотография мамы и малыша"/>
             <div className={styles.offerTitle}>
-              <h1>Сборник простых идей и шаблонов для детского развития и творчества</h1>
+              <h1>Сборник простых идей для детского развития и творчества</h1>
               <p>В сборнике собаронно более 100 простых идей на разные темы и возраст с подробным описанием и необходимыми заготовки.</p>
-              <Link to={"https://payform.ru/ok2P0CU/"} className={styles.button}>Хочу сборник</Link>
+              <Link to={"https://payform.ru/oo2PTwc/"} className={styles.button}>Хочу сборник</Link>
             </div>
           </div>
           <div className={`${styles.headerAdv} ${styles.mobile}`}>
@@ -83,16 +83,19 @@ const Ideas = () => {
                 - <span>100+ </span> идей в одном месте
               </li>
               <li className={styles.advItem}>
+                - Всего <span>15-20</span>  минут в день. Для развития вашего малыша
+              </li>
+              <li className={styles.advItem}>
                 - <span>Бесплатное</span> пополнение каждую неделю
+              </li>
+              <li className={styles.advItem}>
+                - Специальная заготовка к каждой идеи. <span>Только распечатать</span>
               </li>
               <li className={styles.advItem}>
                 - <span>Подробное описание</span> для каждого шаблона
               </li>
               <li className={styles.advItem}>
                 - <span>Развитие</span> ребенка через игры. Просто и весело
-              </li>
-              <li className={styles.advItem}>
-                - Заготовка в кадому шаблону. <span>Только распечатать</span>
               </li>
             </ul>
 
@@ -147,7 +150,7 @@ const Ideas = () => {
                   </SwiperSlide>
                 </Swiper>
             </div>
-            <Link to={"https://payform.ru/ok2P0CU/"} className={`${styles.button} ${styles.reviewsButton}`}>Хочу сборник</Link>
+            <Link to={"https://payform.ru/oo2PTwc/"} className={`${styles.button} ${styles.reviewsButton}`}>Хочу сборник</Link>
           </div>
         </div>
       </section>
