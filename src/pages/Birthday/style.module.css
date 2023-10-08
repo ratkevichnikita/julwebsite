@@ -1,0 +1,73 @@
+.birthday {
+  padding: 25px 0;
+  text-align: center;
+  background-color: #FFDD65;
+  color: #1c1c1c;
+}
+
+.birthdayContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.birthday h1 {
+  font-family: 'Gilroy',sans-serif;
+  margin-bottom: 20px;
+  color: #1c1c1c;
+  font-size: 28px;
+}
+
+.birthdayHello {
+  padding-bottom: 15px;
+  font-size: 18px;
+}
+
+.birthdayImg {
+  max-width: 200px;
+  margin-bottom: 25px;
+}
+
+.birthdayText {
+  margin-bottom: 20px;
+  max-width: 320px;
+}
+
+.birthdayItem {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #838383;
+  border-radius: 15px;
+  font-size: 14px;
+  min-width: 70px;
+  cursor: pointer;
+}
+
+.birthdayItemSelected {
+  border: 1px solid red;
+  color: red;
+}
+
+.birthdayBox {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.birthdayBtn {
+  max-width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  height: 50px;
+  background-color: #cd5352;
+  color: #fff;
+}
+
+.birthdayMoney {
+  margin-bottom: 20px;
+}
