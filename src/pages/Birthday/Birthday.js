@@ -12,7 +12,9 @@ const Birthday = () => {
     {name: '250', link: 'https://payform.ru/ce2M8eS/', selected: false},
     {name: '300', link: 'https://payform.ru/312M8f2/', selected: false},
     {name: '500', link: 'https://payform.ru/472M8fF/', selected: false},
-    {name: '1000', link: 'https://payform.ru/4q2M8fY/', selected: false}
+    {name: '1000', link: 'https://payform.ru/4q2M8fY/', selected: false},
+    {name: '3000', link: 'https://payform.ru/r62RwZP/', selected: false},
+    {name: '5000', link: 'https://payform.ru/rf2RwZY/', selected: false},
   ]);
   const [currentLink, setCurrentLink] = useState('https://payform.ru/ce2M8dX/')
 

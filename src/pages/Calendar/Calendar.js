@@ -97,7 +97,7 @@ const Calendar = () => {
               <h1>Раскройте потенциал вашего ребенка с помощью Календаря развития</h1>
               <p>Вся необходимая информация о развитии малыша с рождения и до пяти лет в одном месте.</p>
               {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-              <Link to={"https://payform.ru/ns2PTvJ/"} className={styles.button}>Купить календарь за 790 ₽</Link>
+              <Link to={"https://payform.ru/cr2Rx2d/"} className={styles.button}>Купить календарь за <span>790</span>  545 ₽</Link>
             </div>
           </div>
           <div className={`${styles.headerAdv} ${styles.mobile}`}>
@@ -165,7 +165,7 @@ const Calendar = () => {
             </div>
             <img className={styles.feeds} src={feeds} alt="картинка листка"/>
             {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-            <Link to={"https://payform.ru/ns2PTvJ/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
+            <Link to={"https://payform.ru/cr2Rx2d/"} className={`${styles.button} ${styles.center}`}>Купить календарь за <span>790</span>  545 ₽</Link>
           </div>
         </div>
       </section>
@@ -219,7 +219,7 @@ const Calendar = () => {
                 <img className={styles.questionsImage2} src={cloudsMobile} alt="Фотография мамы и малыша"/>
               </div>
               {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-              <Link to={"https://payform.ru/ns2PTvJ/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
+              <Link to={"https://payform.ru/cr2Rx2d/"} className={`${styles.button} ${styles.center}`}>Купить календарь за <span>790</span>  545 ₽</Link>
             </div>
         </div>
       </section>
@@ -266,7 +266,7 @@ const Calendar = () => {
                 </div>
               </div>
               {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-              <Link to={"https://payform.ru/ns2PTvJ/"} className={`${styles.button} ${styles.center}`}>Купить календарь за 790 ₽</Link>
+              <Link to={"https://payform.ru/cr2Rx2d/"} className={`${styles.button} ${styles.center}`}>Купить календарь за <span>790</span>  545 ₽</Link>
             </div>
 
           </div>
@@ -366,7 +366,7 @@ const Calendar = () => {
                   “Календарь развития ребенка” - это настольная книга для любых родителей, кто хочет правильно развивать и понимать своего ребенка от 0-5 лет.
                 </p>
                 {/*<button onClick={() => handleClick()} className={styles.button}>Купить календарь за 790 ₽</button>*/}
-                <Link to={"https://payform.ru/ns2PTvJ/"} className={styles.button} >Купить календарь за 790 ₽</Link>
+                <Link to={"https://payform.ru/cr2Rx2d/"} className={styles.button} >Купить календарь за <span>790</span>  545 ₽</Link>
               </div>
               <img src={calendar} alt="фотография Календаря развития"/>
           </div>
