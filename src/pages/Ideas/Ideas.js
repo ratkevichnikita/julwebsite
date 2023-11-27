@@ -55,7 +55,7 @@ const Ideas = () => {
             <div className={styles.offerTitle}>
               <h1>Сборник простых идей для детского развития и творчества</h1>
               <p>В сборнике собаронно более 100 простых идей на разные темы и возраст с подробным описанием и необходимыми заготовки.</p>
-              <Link to={"https://payform.ru/gw2S3ao/"} className={styles.button}>Хочу сборник</Link>
+              <Link to={"https://payform.ru/8135kbT/"} className={styles.button}>Хочу сборник</Link>
             </div>
           </div>
           <div className={`${styles.headerAdv} ${styles.mobile}`}>
@@ -150,7 +150,7 @@ const Ideas = () => {
                   </SwiperSlide>
                 </Swiper>
             </div>
-            <Link to={"https://payform.ru/gw2S3ao/"} className={`${styles.button} ${styles.reviewsButton}`}>Хочу сборник</Link>
+            <Link to={"https://payform.ru/8135kbT/"} className={`${styles.button} ${styles.reviewsButton}`}>Хочу сборник</Link>
           </div>
         </div>
       </section>
