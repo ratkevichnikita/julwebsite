@@ -193,6 +193,65 @@
   margin: 60px auto 0;
 }
 
+.wordsButton {
+  display: block;
+  margin: 40px auto 0;
+}
+
+.cardsList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #303030;
+  list-style-type: disc;
+}
+
+.cardsList ul {
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.cardsList ul,
+.cardsList ul li {
+  list-style-type: disc;
+}
+
+.cardsList ul li {
+  margin-bottom: 20px;
+  max-width: 90%;
+}
+
+.cardsDesc {
+  color: #6F6F6F;
+  font-size: 14px;
+}
+
+.cardsItem {
+  list-style-type: disc;
+  max-width: 570px;
+  width: 100%;
+  padding: 50px;
+  border:1px solid #ABC5DC;
+  border-radius: 5px;
+  height: 100%;
+}
+.cardsItemColor {
+  color: #567892;
+}
+
+.cardsTitle {
+  font-size: 28px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ABC5DC;
+}
+
+.cardsBtn {
+  display: block;
+  margin: 0 auto 20px;
+}
+
 
 
 
@@ -261,7 +320,13 @@
     margin: 0 auto 30px;
   }
 
+  .cardsItem {
+    padding: 20px;
+  }
 
+  .cardsTitle  h3{
+    font-size: 20px;
+  }
 
 }
 

@@ -61,7 +61,7 @@ const NewYearIdeas = () => {
               <img className={styles.offerNg} src={ng} alt=""/>
               <h1>Сборник простых идей для детского развития и творчества</h1>
               <p>В сборнике собаронно более 100 простых идей на разные темы и возраст с подробным описанием и необходимыми заготовки.</p>
-              <Link to={"https://payform.ru/o536SQl/"} className={styles.button}>Купить сборник за 590 рублей</Link>
+              <a href={"#cards"} className={styles.button}>Хочу сборник</a>
             </div>
           </div>
           <div className={`${styles.headerAdv} ${styles.mobile}`}>
@@ -169,11 +169,64 @@ const NewYearIdeas = () => {
                 </SwiperSlide>
               </Swiper>
             </div>
-            <Link to={"https://payform.ru/o536SQl/"} className={`${styles.button} ${styles.reviewsButton}`}>Купить сборник за 590 рублей</Link>
+            <a href={"#cards"} className={`${styles.button} ${styles.reviewsButton}`}>Хочу сборник</a>
           </div>
         </div>
       </section>
-      <Footer />
+      <section id={'cards'} className={`${styles.section} ${styles.cards}`}>
+        <div className={styles.wrapper}>
+          <div className={styles.cardsList}>
+            <div className={styles.cardsItem}>
+              <div className={styles.cardsTitle}>
+                <h3 className={styles.center}>Сборник Новогодних идей подарков и творчесва</h3>
+              </div>
+              <ul>
+                <li>
+                  30+ идей подарков своими руками и творческих поделок на тему Нового года
+                </li>
+                <li>
+                  Простые и доступные идеи для детей от 1-6 лет
+                </li>
+                <li>
+                  Пошаговая инструкция к каждой идеи с описанием и фотографиями процесса
+                </li>
+                <li>
+                  Шаблоны к каждой идеи
+                </li>
+              </ul>
+              <Link to={"https://payform.ru/dn36U3q/"} className={`${styles.cardsBtn} ${styles.button}`}>Купить сборник за 390 рублей</Link>
+              <p className={`${styles.center} ${styles.cardsDesc}`}>! Также оплатить можно картами зарубежных банков</p>
+            </div>
+            <div className={styles.cardsItem}>
+              <div className={styles.cardsTitle}>
+                <h3 className={styles.center}>Сборник Новогодних идей подарков и творчесва</h3>
+                <p className={styles.center}>+</p>
+                <h3 className={styles.center}>Основной Сборник идей для творчества и развития</h3>
+              </div>
+              <ul>
+                <li className={styles.cardsItemColor}>
+                  Все тоже, что в сборнике с Новогодними идеями
+                </li>
+                <li>
+                  100+ идей для творчества на разные тематики: рисование, аппликации, поделки, опыты, развивашки и т.д.
+                </li>
+                <li>
+                  Пошаговая инструкция к каждой идеи с описанием и фотографиями процесса
+                </li>
+                <li>
+                  Шаблоны к каждой идеи
+                </li>
+                <li>
+                  Бесплатное пополнение сборника новыми идеями каждую неделю
+                </li>
+              </ul>
+              <Link to={"https://payform.ru/o536SQl/"} className={`${styles.cardsBtn} ${styles.button}`}>Купить сборник за 590 рублей</Link>
+              <p className={`${styles.center} ${styles.cardsDesc}`}>! Также оплатить можно картами зарубежных банков</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer bg={true} />
     </div>
   );
 };
