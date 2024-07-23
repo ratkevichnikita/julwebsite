@@ -245,3 +245,16 @@ body {
 .swiper-button-next, .swiper-button-prev {
   color: #cd5352;
 }
+
+.reviewsSlider {
+  margin: -100px!important ;
+  padding: 100px!important;
+}
+
+.reviewsSlider  .swiper-pagination {
+  top: 85%!important;
+}
+
+.reviewsSlider  .swiper-pagination-bullet-active {
+  background: #FF0E86!important;
+}

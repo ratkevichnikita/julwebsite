@@ -20,6 +20,7 @@ const DonationLazy = lazy(() => import('./pages/Donation/Donation'));
 const IdeasLazy = lazy(() => import('./pages/Ideas/Ideas'));
 const NewYearIdeasLazy = lazy(() => import('./pages/NewYearIdeas/NewYearIdeas'));
 const BirthdayLazy = lazy(() => import('./pages/Birthday/Birthday'));
+const Intensive = lazy(() => import('./pages/Intensive/Intensive'));
 
 function App() {
   const [cartProducts, setCartProducts] = useState([]);
@@ -144,6 +145,7 @@ function App() {
           <Route path={'/ideas'} exact element={<Suspense fallback={"Загрузка..."} > <IdeasLazy /></Suspense>} />
           <Route path={'/newyearideas'} exact element={<Suspense fallback={"Загрузка..."} > <NewYearIdeasLazy /></Suspense>} />
           <Route path={'/birthday'} exact element={<Suspense fallback={"Загрузка..."} > <BirthdayLazy /></Suspense>} />
+          <Route path={'/intensive'} exact element={<Suspense fallback={"Загрузка..."} > <Intensive /></Suspense>} />
           <Route path={'/oferta'} exact element={<Suspense fallback={"Загрузка..."} > <OfertaLazy /> </Suspense>} />
           <Route path={'/promo/:title'} exact element={<Suspense fallback={"Загрузка..."} > <PromoLazy /> </Suspense>} />
           <Route path={'*'} exact element={<Suspense fallback={"Загрузка..."} > <NotFoundLazy /> </Suspense>} />
