@@ -32,18 +32,18 @@
 
 .offer {
   position: relative;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
-.offerSnow{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-image: url('../../images/newyear/background1.webp'), url('../../images/newyear/background2.webp'), url('../../images/newyear/background3.webp');
-  animation: snow 30s linear infinite;
-}
+/*.offerSnow{*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*  top: 0;*/
+/*  background-image: url('../../images/newyear/background1.webp'), url('../../images/newyear/background2.webp'), url('../../images/newyear/background3.webp');*/
+/*  animation: snow 30s linear infinite;*/
+/*}*/
 
 @keyframes snow {
   0%{

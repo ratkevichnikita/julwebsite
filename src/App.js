@@ -13,6 +13,7 @@ const ResultsLazy = lazy(() => import('./pages/Results/Results'));
 const CheckoutLazy  = lazy(() => import('./pages/Checkout/Checkout'));
 const NotFoundLazy = lazy(() => import('./pages/NotFound/NotFound'));
 const CalendarLazy = lazy(() => import('./pages/Calendar/Calendar'));
+const CalendarPromoLazy = lazy(() => import('./pages/CalendarPromo/CalendarPromo'));
 const CalendarPaymentLazy = lazy(() => import('./pages/Calendar/CalendarPayment'));
 const OfertaLazy = lazy(() => import('./pages/Oferta/Oferta'));
 const PromoLazy = lazy(() => import('./pages/Promo/Promo'));
@@ -140,6 +141,7 @@ function App() {
           <Route path={'/results'} exact element={<Suspense fallback={"Загрузка..."} > <ResultsLazy paymentInfo={paymentInfo} /></Suspense>} />
           <Route path={'/checkout'} exact element={<Suspense fallback={"Загрузка..."} > <CheckoutLazy /></Suspense>} />
           <Route path={'/calendar'} exact element={<Suspense fallback={"Загрузка..."} > <CalendarLazy /></Suspense>} />
+          <Route path={'/calendarPromo'} exact element={<Suspense fallback={"Загрузка..."} > <CalendarPromoLazy /></Suspense>} />
           <Route path={'/calendarPayment'} exact element={<Suspense fallback={"Загрузка..."} > <CalendarPaymentLazy /></Suspense>} />
           <Route path={'/donation'} exact element={<Suspense fallback={"Загрузка..."} > <DonationLazy /></Suspense>} />
           <Route path={'/ideas'} exact element={<Suspense fallback={"Загрузка..."} > <IdeasLazy /></Suspense>} />

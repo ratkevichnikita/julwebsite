@@ -2,20 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7519cdc7-51c8-4a00-bdf3-630384e6fa81" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/images/intensive/bg.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/intensive/bg2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/intensive/headerIcon1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/intensive/headerIcon2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/intensive/headerIcon3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/intensive/main.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/intensive/who1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/intensive/who2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/intensive/who3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/intensive/who4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Intensive/Intensive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Intensive/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/calendar/calendarPromo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/calendar/calendarPromoImg2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CalendarPromo/CalendarPromo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/CalendarPromo/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Ideas/Ideas.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Ideas/Ideas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Ideas/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Ideas/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Intensive/Intensive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Intensive/Intensive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Intensive/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Intensive/styles.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +38,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/nikita/Documents/layout/julwebsite",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nikita/Documents/layout/julwebsite&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images/calendar" />
       <recent name="$PROJECT_DIR$/src/images/intensive" />
     </key>
   </component>
@@ -69,6 +67,8 @@
       <updated>1710367863911</updated>
       <workItem from="1710367865570" duration="3253000" />
       <workItem from="1721164211251" duration="6808000" />
+      <workItem from="1728284771363" duration="821000" />
+      <workItem from="1732992191457" duration="2597000" />
     </task>
     <servers />
   </component>
